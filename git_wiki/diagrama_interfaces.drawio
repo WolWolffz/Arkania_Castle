@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-20T22:58:12.519Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 OPR/107.0.0.0" etag="c9bF_SIHPoJa0xK7lrb8" version="24.2.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-20T22:59:00.138Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 OPR/107.0.0.0" etag="jabR8n8QKPN77IUla260" version="24.2.5" type="github">
   <diagram name="Página-1" id="SNxv4zWWsFA6j5CXLBQm">
     <mxGraphModel dx="1161" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1001,10 +1001,10 @@
           <mxGeometry x="413.08" y="2440" width="253" height="500" as="geometry" />
         </mxCell>
         <mxCell id="gTiewvjynMAV3e2FGLMi-158" value="As salas possuem tamanho-útil fixo a depender de sua capacidade.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;As salas estão divididas em:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Sala pequena: 4 espaços cada lado&lt;/li&gt;&lt;li&gt;Sala média: 6 espaços cada lado&lt;/li&gt;&lt;li&gt;Sala grande: 8 espaços cada lado&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;A disposição dos elementos na&amp;nbsp; sala depende do tamanho dela, e são como slots fixos com coordenada (x,y) para cada slot na sala.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;As salas precisam ter sua arte feita de forma que permita uma saída em qualquer extremidade por uma sobreposição de imagem do que serão os caminhos&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="388.67" y="3040" width="253" height="440" as="geometry" />
+          <mxGeometry x="388.67" y="2980" width="253" height="440" as="geometry" />
         </mxCell>
         <mxCell id="gTiewvjynMAV3e2FGLMi-159" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="48" y="3110" width="315" height="340" as="geometry" />
+          <mxGeometry x="48" y="3070" width="315" height="340" as="geometry" />
         </mxCell>
         <mxCell id="gTiewvjynMAV3e2FGLMi-155" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="gTiewvjynMAV3e2FGLMi-159">
           <mxGeometry y="160" width="315" height="180" as="geometry" />
@@ -1037,7 +1037,7 @@
           <mxGeometry x="217.29694736842106" y="180" width="51.50084210526315" height="153.33333333333331" as="geometry" />
         </mxCell>
         <mxCell id="gTiewvjynMAV3e2FGLMi-160" value="Esquemáticos de Elementos" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="94.42000000000002" y="3060" width="230" height="30" as="geometry" />
+          <mxGeometry x="94.42000000000002" y="3020" width="230" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
