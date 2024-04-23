@@ -7,6 +7,7 @@
 Temp/
 Library/
 Logs/
+UserSettings/
 
 # my personal build folder (you can change the name for your personal build folder to ignore it and build files):
 build/ 
@@ -31,5 +32,3 @@ obj/
 *.unityproj
 *.booproj
 *.tmp
-
-UserSettings/
