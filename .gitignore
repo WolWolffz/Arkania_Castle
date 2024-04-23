@@ -31,3 +31,5 @@ obj/
 *.unityproj
 *.booproj
 *.tmp
+
+UserSettings/

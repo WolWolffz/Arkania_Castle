@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Arenas
+    uniqueID: 115610961
+    locked: 0
+  - name: CharacterGroups
+    uniqueID: 931220317
+    locked: 0
+  - name: Ways
+    uniqueID: 2528946615
+    locked: 0
