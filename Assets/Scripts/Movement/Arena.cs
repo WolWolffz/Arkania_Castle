@@ -7,14 +7,51 @@ public class Arena : MonoBehaviour
 {
     public List<Way> upWays = new List<Way>();
     public List<Way> downWays = new List<Way>();
+    public bool isSelected = false;
 
-    // Start is called before the first frame update
-    void Start() { }
+    private SpriteRenderer spriteRenderer;
+    private Color unselectedColor,
+        selectedColor;
 
-    // Update is called once per frame
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    void Start()
+    {
+        unselectedColor = spriteRenderer.color;
+        selectedColor = new Color(
+            unselectedColor.r / 2,
+            unselectedColor.g / 2,
+            unselectedColor.b / 2
+        );
+    }
+
     void Update()
     {
         // Debug.Log(ways.Count.ToString());
+    }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0)) {
+             Select(!isSelected);
+        }
+    }
+
+    void Select(bool value)
+    {
+        if (value)
+        {
+            isSelected = true;
+            spriteRenderer.color = selectedColor;
+        }
+        else
+        {
+            isSelected = false;
+            spriteRenderer.color = unselectedColor;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
