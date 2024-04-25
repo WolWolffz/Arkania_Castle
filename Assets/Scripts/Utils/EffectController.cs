@@ -2,20 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class EffectController : MonoBehaviour
 {
-    public static GameManager instance;
-    
-    public Level level {get;set;}
-
-    void Awake(){
-        instance = this;
-    }
-
+    public float duration = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(gameObject, 1f);
     }
 
     // Update is called once per frame
@@ -23,6 +16,4 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    
-
 }

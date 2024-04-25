@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour
 {
+    private List<Arena> arenas = new List<Arena>();
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (Transform child in transform)
+        {
+            var component = child.GetComponent<Arena>();
+
+            if (component != null)
+                arenas.Add(component);
+        }
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() { }
+
+    void OnCollisionEnter2D(Collision2D collision) { }
 }

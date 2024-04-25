@@ -41,11 +41,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Level
+    uniqueID: 2145388921
+    locked: 0
+  - name: Floors
+    uniqueID: 596944271
+    locked: 0
   - name: Arenas
     uniqueID: 115610961
     locked: 0
   - name: CharacterGroups
     uniqueID: 931220317
+    locked: 0
+  - name: Slots
+    uniqueID: 3725015799
     locked: 0
   - name: Ways
     uniqueID: 2528946615

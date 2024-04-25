@@ -5,9 +5,14 @@ using UnityEngine;
 
 public class Arena : MonoBehaviour
 {
-    public List<Way> upWays = new List<Way>();
-    public List<Way> downWays = new List<Way>();
+    private GameManager gameManager;
+
+    private List<Way> upWays = new List<Way>();
+    private List<Way> downWays = new List<Way>();
+    private CharacterGroup characterGroup;
+
     public bool isSelected = false;
+    public bool isFighting = false;
 
     private SpriteRenderer spriteRenderer;
     private Color unselectedColor,
@@ -16,10 +21,13 @@ public class Arena : MonoBehaviour
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        characterGroup = gameObject.GetComponentInChildren<CharacterGroup>();
     }
 
     void Start()
     {
+        gameManager = GameManager.instance;
+        
         unselectedColor = spriteRenderer.color;
         selectedColor = new Color(
             unselectedColor.r / 2,
@@ -30,28 +38,56 @@ public class Arena : MonoBehaviour
 
     void Update()
     {
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //     RaycastHit hit;
+        //     if (Physics.Raycast(ray, out hit))
+        //     {
+        //         //Select stage
+        //         Debug.Log(hit.transform.name);
+        //     }
+        // }
+
         // Debug.Log(ways.Count.ToString());
     }
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0)) {
-             Select(!isSelected);
+        if (Input.GetMouseButtonDown(0))
+        {
+            Clicked();
         }
     }
 
-    void Select(bool value)
+    void Clicked()
     {
-        if (value)
+        if (!isFighting)
         {
-            isSelected = true;
-            spriteRenderer.color = selectedColor;
+            Select(!isSelected);
+
+            if (isSelected)
+                gameManager.level.SelectArena(this);
+            else
+                gameManager.level.ClearSelectedArenas(); // ClearSelectedArena(this)
         }
         else
         {
-            isSelected = false;
-            spriteRenderer.color = unselectedColor;
+            gameManager.level.CantMoveTroops(this);
         }
+    }
+
+    public void Select(bool value){
+        isSelected = value;
+
+        if (isSelected)
+            spriteRenderer.color = selectedColor;
+        else
+            spriteRenderer.color = unselectedColor;
+    }
+
+    public void MoveTroops(Arena toArena){
+        Debug.Log("Move from " + name + " to " + toArena.name);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -60,11 +96,11 @@ public class Arena : MonoBehaviour
         {
             var component = collision.gameObject.GetComponent<Way>();
 
-            if (collision.collider.transform.gameObject.name == "Bottom")
+            if (collision.collider.gameObject.name == "Bottom")
                 if (upWays.IndexOf(component) < 0)
                     upWays.Add(component);
 
-            if (collision.collider.transform.gameObject.name == "Top")
+            if (collision.collider.gameObject.name == "Top")
                 if (downWays.IndexOf(component) < 0)
                     downWays.Add(component);
         }
