@@ -36,16 +36,33 @@ public class Level : MonoBehaviour
         // Debug.Log("CANT MOVE TROOPS: " + arena.name);
     }
 
-    public void SelectArena(Arena arena)
+    public void ArenaClicked(Arena arena)
     {
         if (fromArena == null)
         {
-            fromArena = arena;
+            if (!arena.isFighting)
+            {
+                fromArena = arena;
+                arena.Select(true);
+            }
+            else
+            {
+                CantMoveTroops(arena);
+            }
         }
         else
         {
-            toArena = arena;
-            Invoke("MoveTroops", 0.2f);
+            if (arena == fromArena)
+            {
+                fromArena = null;
+                arena.Select(false);
+            }
+            else
+            {
+                toArena = arena;
+                arena.Select(true);
+                Invoke("MoveTroops", 0.2f);
+            }
         }
     }
 

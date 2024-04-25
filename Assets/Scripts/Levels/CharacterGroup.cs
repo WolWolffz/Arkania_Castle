@@ -1,26 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterGroup : MonoBehaviour
 {
-    private Transform enemies;
-    private Transform allies;
-    private List<Vector3> enemiesSlots = new List<Vector3>();
-    private List<Vector3> alliesSlots = new List<Vector3>();
+    private Transform enemiesSlots;
+    private Transform alliesSlots;
+    private List<Vector3> enemiesSlotsPositions = new List<Vector3>();
+    private List<Vector3> alliesSlotsPositions = new List<Vector3>();
+    private List<Enemy> enemies = new List<Enemy>();
+    private List<Allie> allies = new List<Allie>();
+    private int totalEnemiesSlots;
+    private int totalAlliesSlots;
+
+    public int freeEnemiesSlots;
+    public int freeAlliesSlots;
 
     // Start is called before the first frame update
     void Start()
     {
-        enemies = transform.Find("Enemies");
-        allies = transform.Find("Allies");
+        enemiesSlots = transform.Find("Enemies");
+        alliesSlots = transform.Find("Allies");
 
-        foreach (Transform child in enemies){
-            enemiesSlots.Add(child.position);
+        foreach (Transform child in enemiesSlots)
+        {
+            enemiesSlotsPositions.Add(child.position);
         }
-        foreach (Transform child in allies){
-            alliesSlots.Add(child.position);
+        foreach (Transform child in alliesSlots)
+        {
+            alliesSlotsPositions.Add(child.position);
         }
+
+        totalEnemiesSlots = enemiesSlotsPositions.Count;
+        totalAlliesSlots = alliesSlotsPositions.Count;
 
         // Otimizado
         // foreach (Transform child in transform.Find("Enemies")){
@@ -32,8 +45,18 @@ public class CharacterGroup : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() { }
+
+    public void MoveTroops(CharacterGroup toCharacterGroup, Way byWay)
     {
+        var movePoints = new List<Vector3>
+        {
+            byWay.bottomPosition,
+            byWay.topPosition
+        };
         
+        for (int i = 0; i < Math.Min(allies.Count, toCharacterGroup.freeAlliesSlots); i++) {
+            allies[i].Move(movePoints);
+        }
     }
 }

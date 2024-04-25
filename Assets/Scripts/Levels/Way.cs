@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class Way : MonoBehaviour
 {
-    private Arena topArena;
-    private Arena bottomArena;
+    public Arena topArena;
+    public Arena bottomArena;
+    public Vector3 topPosition;
+    public Vector3 bottomPosition;
 
     // Start is called before the first frame update
-    void Start() { }
+    void Start() {
+        topPosition = transform.Find("Top").transform.position;
+        bottomPosition = transform.Find("Bottom").transform.position;
+    }
 
     // Update is called once per frame
     void Update() { }

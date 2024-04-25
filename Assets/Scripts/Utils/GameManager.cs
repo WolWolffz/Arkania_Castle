@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     
-    public Level level {get;set;}
+    public Level level;
+    public bool isControlEnabled = true;
 
     void Awake(){
         instance = this;

@@ -27,7 +27,7 @@ public class Arena : MonoBehaviour
     void Start()
     {
         gameManager = GameManager.instance;
-        
+
         unselectedColor = spriteRenderer.color;
         selectedColor = new Color(
             unselectedColor.r / 2,
@@ -54,30 +54,31 @@ public class Arena : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && gameManager.isControlEnabled)
         {
-            Clicked();
+            gameManager.level.ArenaClicked(this);
         }
     }
 
     void Clicked()
     {
-        if (!isFighting)
-        {
-            Select(!isSelected);
+        // if (!isFighting)
+        // {
+        //     Select(!isSelected);
 
-            if (isSelected)
-                gameManager.level.SelectArena(this);
-            else
-                gameManager.level.ClearSelectedArenas(); // ClearSelectedArena(this)
-        }
-        else
-        {
-            gameManager.level.CantMoveTroops(this);
-        }
+        //     if (isSelected)
+        //         gameManager.level.SelectArena(this);
+        //     else
+        //         gameManager.level.ClearSelectedArenas(); // ClearSelectedArena(this)
+        // }
+        // else
+        // {
+        //     gameManager.level.CantMoveTroops(this);
+        // }
     }
 
-    public void Select(bool value){
+    public void Select(bool value)
+    {
         isSelected = value;
 
         if (isSelected)
@@ -86,8 +87,28 @@ public class Arena : MonoBehaviour
             spriteRenderer.color = unselectedColor;
     }
 
-    public void MoveTroops(Arena toArena){
+    public void MoveTroops(Arena toArena)
+    {
         Debug.Log("Move from " + name + " to " + toArena.name);
+
+        Way way = null;
+        foreach (Way upWay in upWays)
+        {
+            if (upWay.topArena == toArena)
+            {
+                way = upWay;
+                return;
+            }
+        }
+
+        if (way != null) {
+            characterGroup.MoveTroops(toArena.characterGroup, way);
+        }
+        else
+        {
+            gameManager.level.CantMoveTroops(toArena);
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
