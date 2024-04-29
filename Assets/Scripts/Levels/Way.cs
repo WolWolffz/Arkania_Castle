@@ -7,31 +7,31 @@ public class Way : MonoBehaviour
 {
     public Arena topArena;
     public Arena bottomArena;
+    public Vector3 topPosition;
+    public Vector3 bottomPosition;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+        topPosition = transform.Find("Top").transform.position;
+        bottomPosition = transform.Find("Bottom").transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() { }
+
+    void OnCollisionStay2D(Collision2D collision)
     {
-        
-    }
+        if (collision.collider.gameObject.GetComponent<Arena>() != null)
+        {
+            var colliderChild = collision.GetContact(0).otherCollider;
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {              
-        if (collision.GetContact(0).otherCollider.transform.gameObject.name == "Top"){
-            topArena = collision.collider.gameObject.GetComponent<Arena>();
-            //Debug.Log("Way 1 Top: " + topArena.name);
+            if (colliderChild.gameObject.name == "Top")
+                topArena = collision.collider.gameObject.GetComponent<Arena>();
+
+
+            if (colliderChild.gameObject.name == "Bottom")
+                bottomArena = collision.collider.gameObject.GetComponent<Arena>();
+
         }
-
-        if (collision.GetContact(0).otherCollider.transform.gameObject.name == "Bottom"){
-            bottomArena = collision.collider.gameObject.GetComponent<Arena>();
-            //Debug.Log("Way 1 Bottom: " + bottomArena.name);
-        }
-     
     }
-
 }

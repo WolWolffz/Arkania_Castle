@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: e08feecc56341064fab82486c3141a69
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: denied_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 2584
+        width: 101
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1eb2d64b75d7446abb72fb3c391106
+      internalID: 498181271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2521
+        width: 151
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0723d83440841104fbcddac5f50c3b5f
+      internalID: 1382157824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 2459
+        width: 196
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b82730e271608b48aa59be571dea1fb
+      internalID: 282848499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3086
+        y: 2399
+        width: 264
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb00e8b467554e44290984027f1fee39
+      internalID: 1459322711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1642
+        width: 324
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd51b3c4501df241966dfd66c06b704
+      internalID: -108474051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1591
+        width: 389
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d8c89613166fb4788be93dd2c78efa
+      internalID: 507157720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 1534
+        width: 419
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74fb70c85c954664390398314297bd7e
+      internalID: 168260469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2164
+        y: 1488
+        width: 487
+        height: 497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77864dac3376b4438fb40c873a2c1d6
+      internalID: 2083404576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 1480
+        width: 516
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e401e7196bc6641b0e07b3501e4255
+      internalID: -2097281962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 780
+        width: 518
+        height: 543
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d512421f8435f4783e8d6a1d708758
+      internalID: 530353770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 780
+        width: 516
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edcf5c90f84ff14daceb1bb6e55fbec
+      internalID: 1970731671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 780
+        width: 516
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e273e4eb260ff45a36f43df2bc4d52
+      internalID: -1888952025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 2134
+        y: 780
+        width: 517
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11e980d94d9c4643b8ee0098d380ddd
+      internalID: -683847772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 780
+        width: 516
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb191a1e5496c9468c529e6e1639117
+      internalID: 539807216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 80
+        width: 518
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336bd74c2ed705a4eb225dee56694dc1
+      internalID: 587037158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 80
+        width: 517
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc5dff0c2ecc38499b49c3a8ec2d2bf
+      internalID: -1916850773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 80
+        width: 559
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3319dfbc1570048b823df03a387f57
+      internalID: -1596168094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: denied_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 2134
+        y: 80
+        width: 576
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12419f8ee6399994faf199c2ba56766d
+      internalID: 607364611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      denied_spritesheet_0: 498181271
+      denied_spritesheet_1: 1382157824
+      denied_spritesheet_10: 530353770
+      denied_spritesheet_11: 1203330462
+      denied_spritesheet_12: 1970731671
+      denied_spritesheet_13: -681682029
+      denied_spritesheet_14: -1888952025
+      denied_spritesheet_15: 1970336969
+      denied_spritesheet_16: -683847772
+      denied_spritesheet_17: 539807216
+      denied_spritesheet_18: -1219760652
+      denied_spritesheet_19: 1962639785
+      denied_spritesheet_2: 282848499
+      denied_spritesheet_20: -1835035444
+      denied_spritesheet_21: 686405565
+      denied_spritesheet_22: -894049821
+      denied_spritesheet_23: 1789638406
+      denied_spritesheet_24: 587037158
+      denied_spritesheet_25: -725101857
+      denied_spritesheet_26: -1916850773
+      denied_spritesheet_27: -452249134
+      denied_spritesheet_28: -1596168094
+      denied_spritesheet_29: 520139183
+      denied_spritesheet_3: 1459322711
+      denied_spritesheet_30: 607364611
+      denied_spritesheet_4: -108474051
+      denied_spritesheet_5: 507157720
+      denied_spritesheet_6: 168260469
+      denied_spritesheet_7: 2083404576
+      denied_spritesheet_8: -2097281962
+      denied_spritesheet_9: 1989362881
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
