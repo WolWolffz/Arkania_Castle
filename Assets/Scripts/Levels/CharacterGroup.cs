@@ -1,19 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharacterGroup : MonoBehaviour
 {
     private Transform enemiesSlots;
     private Transform alliesSlots;
-    private List<Vector3> enemiesSlotsPositions = new List<Vector3>();
-    private List<Vector3> alliesSlotsPositions = new List<Vector3>();
-    private List<Enemy> enemies = new List<Enemy>();
-    private List<Allie> allies = new List<Allie>();
+    public List<Vector3> enemiesSlotsPositions = new List<Vector3>();
+    public List<Vector3> alliesSlotsPositions = new List<Vector3>();
     private int totalEnemiesSlots;
     private int totalAlliesSlots;
 
+    public List<Allie> allies = new List<Allie>();
+    public List<Enemy> enemies = new List<Enemy>();
     public int freeEnemiesSlots;
     public int freeAlliesSlots;
 
@@ -45,18 +46,43 @@ public class CharacterGroup : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() { }
+    void Update()
+    {
+        freeEnemiesSlots = Math.Abs(totalEnemiesSlots - enemies.Count);
+        freeAlliesSlots = Math.Abs(totalAlliesSlots - allies.Count);
+    }
 
     public void MoveTroops(CharacterGroup toCharacterGroup, Way byWay)
     {
-        var movePoints = new List<Vector3>
+        StartCoroutine(MoveTroopsDelayed(toCharacterGroup, byWay));
+    }
+
+    IEnumerator MoveTroopsDelayed(CharacterGroup toCharacterGroup, Way byWay){
+        int nAllies = allies.Count;
+        int nFreeAlliesSlots = toCharacterGroup.freeAlliesSlots;
+        int nMoves = Math.Min(nAllies, nFreeAlliesSlots);
+        List<Allie> toRemove = new List<Allie>();
+
+        for (int i = 0; i < nMoves; i++)
         {
-            byWay.bottomPosition,
-            byWay.topPosition
-        };
-        
-        for (int i = 0; i < Math.Min(allies.Count, toCharacterGroup.freeAlliesSlots); i++) {
+            var movePoints = new List<Vector3>
+            {
+                byWay.bottomPosition,
+                byWay.topPosition,
+            };
             allies[i].Move(movePoints);
+            toRemove.Add(allies[i]);
+
+            yield return new WaitForSeconds(Character.speed * 0.06f);
+        }
+        foreach(Allie allie in toRemove) allies.Remove(allie);
+        OrderTroops();
+    }
+
+    public void OrderTroops(){
+        foreach(Allie allie in allies){
+            if (!allie.isMoving)
+                allie.Move(new List<Vector3> { alliesSlotsPositions[allies.IndexOf(allie)] });
         }
     }
 }

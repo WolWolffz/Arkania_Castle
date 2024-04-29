@@ -40,7 +40,7 @@ public class Level : MonoBehaviour
     {
         if (fromArena == null)
         {
-            if (!arena.isFighting)
+            if (!arena.isFighting && arena.characterGroup.allies.Count > 0)
             {
                 fromArena = arena;
                 arena.Select(true);
@@ -52,17 +52,19 @@ public class Level : MonoBehaviour
         }
         else
         {
-            if (arena == fromArena)
-            {
-                fromArena = null;
-                arena.Select(false);
-            }
-            else
-            {
-                toArena = arena;
-                arena.Select(true);
-                Invoke("MoveTroops", 0.2f);
-            }
+            
+                if (arena == fromArena)
+                {
+                    fromArena = null;
+                    arena.Select(false);
+                }
+                else
+                {
+                    toArena = arena;
+                    arena.Select(true);
+                    Invoke("MoveTroops", 0.2f);
+                }
+            
         }
     }
 

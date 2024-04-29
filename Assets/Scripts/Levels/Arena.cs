@@ -9,7 +9,7 @@ public class Arena : MonoBehaviour
 
     private List<Way> upWays = new List<Way>();
     private List<Way> downWays = new List<Way>();
-    private CharacterGroup characterGroup;
+    public CharacterGroup characterGroup;
 
     public bool isSelected = false;
     public bool isFighting = false;
@@ -60,23 +60,6 @@ public class Arena : MonoBehaviour
         }
     }
 
-    void Clicked()
-    {
-        // if (!isFighting)
-        // {
-        //     Select(!isSelected);
-
-        //     if (isSelected)
-        //         gameManager.level.SelectArena(this);
-        //     else
-        //         gameManager.level.ClearSelectedArenas(); // ClearSelectedArena(this)
-        // }
-        // else
-        // {
-        //     gameManager.level.CantMoveTroops(this);
-        // }
-    }
-
     public void Select(bool value)
     {
         isSelected = value;
@@ -89,26 +72,24 @@ public class Arena : MonoBehaviour
 
     public void MoveTroops(Arena toArena)
     {
-        Debug.Log("Move from " + name + " to " + toArena.name);
-
         Way way = null;
         foreach (Way upWay in upWays)
         {
             if (upWay.topArena == toArena)
             {
                 way = upWay;
-                return;
+                break;
             }
         }
 
-        if (way != null) {
+        if (way != null && toArena.characterGroup.freeAlliesSlots > 0)
+        {
             characterGroup.MoveTroops(toArena.characterGroup, way);
         }
         else
         {
             gameManager.level.CantMoveTroops(toArena);
         }
-
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -125,5 +106,33 @@ public class Arena : MonoBehaviour
                 if (downWays.IndexOf(component) < 0)
                     downWays.Add(component);
         }
+
+        if (collision.gameObject.GetComponent<Allie>() != null)
+        {
+            var component = collision.gameObject.GetComponent<Allie>();
+
+            if (characterGroup.allies.IndexOf(component) < 0)
+            {
+                characterGroup.allies.Add(component);
+                component.Move(
+                    new List<Vector3>
+                    {
+                        characterGroup.alliesSlotsPositions[
+                            characterGroup.allies.IndexOf(component)
+                        ]
+                    }
+                );
+            }
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        // if (collision.gameObject.GetComponent<Allie>() != null)
+        // {
+        //     var component = collision.gameObject.GetComponent<Allie>();
+        //     characterGroup.allies.Remove(component);
+        //     characterGroup.OrderTroops();
+        // }
     }
 }
