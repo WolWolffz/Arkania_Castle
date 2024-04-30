@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    private AnimationController animationController;
     private List<Vector3> movePoints = new List<Vector3>();
     private int pointIndex = 0;
     private Vector3 lastPosition;
+    private Vector2 lastMovementFlag;
+    private string animationState;
 
     public static float speed = 3;
     public Vector2 movementFlags;
@@ -16,8 +19,10 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
     public virtual void Start()
     {
+        animationState = "Idle";
         lastPosition = transform.position;
         movePoints.Add(transform.position);
+        animationController = GetComponent<AnimationController>();
     }
 
     // Update is called once per frame
@@ -25,6 +30,7 @@ public class Character : MonoBehaviour
     {
         UpdateMovement();
         DetectMovement();
+        UpdateAnimation();
     }
 
     void UpdateMovement()
@@ -69,5 +75,20 @@ public class Character : MonoBehaviour
     {
         movePoints = newMovePoints;
         pointIndex = 0;
+    }
+
+    void UpdateAnimation(){
+        string newAnimationState = "Idle";
+
+        if(movementFlags.x != 0){
+            newAnimationState = movementFlags.x > 0 ? "Walk Right" : "Walk Left";
+        }else if(movementFlags.y != 0){
+            newAnimationState = movementFlags.y > 0 ? "Walk Up" : "Walk Down";
+        }
+
+        if(newAnimationState != animationState){
+            animationState = newAnimationState;
+            animationController.MovementAnimation(animationState);
+        }
     }
 }
