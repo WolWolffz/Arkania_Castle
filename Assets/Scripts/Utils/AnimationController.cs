@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
+    private Animator animator;
+
+    void Awake(){
+        animator = GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +20,10 @@ public class AnimationController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void MovementAnimation(string state){
+        var animation = Animator.StringToHash(state);
+        animator.CrossFade(animation, 0, 0);
     }
 }
