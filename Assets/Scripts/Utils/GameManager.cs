@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+    
+    public Level level;
+    public bool isControlEnabled = true;
+
+    void Awake(){
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +24,6 @@ public class GameManager : MonoBehaviour
     {
         
     }
+    
+
 }
