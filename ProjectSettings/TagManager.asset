@@ -50,3 +50,18 @@ TagManager:
   - name: Ways
     uniqueID: 2528946615
     locked: 0
+  - name: CardTopHand
+    uniqueID: 1114919891
+    locked: 0
+  - name: Card 4
+    uniqueID: 1498319599
+    locked: 0
+  - name: Card 3
+    uniqueID: 3631904033
+    locked: 0
+  - name: Card 2
+    uniqueID: 2717328077
+    locked: 0
+  - name: Card 1
+    uniqueID: 4190978951
+    locked: 0

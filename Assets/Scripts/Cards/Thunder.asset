@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a673b212a88dce4fbecea2d2d790926, type: 3}
+  m_Name: Thunder
+  m_EditorClassIdentifier: 
+  cardType: 2
+  nameCard: Thunder
+  manaCost: 2
+  health: 0
+  damage: 10
+  descriptionCard: Desfere 10 de dano ao inimigos da sala.
+  effect: 2
+  spriteCard: {fileID: 8607225190688500780, guid: c28af5a7c41f94443b0b5e675513c455, type: 3}
