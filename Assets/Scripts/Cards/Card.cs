@@ -16,7 +16,7 @@ public class Card : ScriptableObject
 
     public CardEffect effect;
 
-    public GameObject spriteCard;
+    public Sprite spriteCard;
 
     public enum CardEffect{
         NoEffect,

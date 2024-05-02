@@ -10,7 +10,7 @@ public class CardView : MonoBehaviour
     public Card cardData;
     public GameObject cardPrefab;
 
-    public Texture2D cardImage;
+    public Sprite cardImage;
     public TMP_Text nameText;
     public TMP_Text healthText;
     public TMP_Text damageText;
@@ -31,19 +31,19 @@ public class CardView : MonoBehaviour
         manaText.text = cardData.manaCost.ToString();
         damageText.text = cardData.damage.ToString();
         descriptionText.text = cardData.descriptionCard;
-        if (cardData.cardType == Card.CardType.Troop)
-        {
-            cardImage.GetComponent<SpriteRenderer>().sprite = cardData.spriteCard.GetComponent<SpriteRenderer>().sprite;
-        }
-        else if (cardData.cardType == Card.CardType.Artefact)
-        {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = cardData.spriteCard;
 
-        }
-        else if (cardData.cardType == Card.CardType.Speel)
-        {
+        // if (cardData.cardType == Card.CardType.Troop){
+        //     continue;
+        // }
+        // elif (cardData.cardType == Card.CardType.Speel){
+        //     healthText.text = null;
+        // }
+        // elif (cardData.cardType == Card.CardType.Artefact){
 
-        }
-
+        // }
+        
 
 
     }

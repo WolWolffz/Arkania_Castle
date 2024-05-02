@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Soldier
   m_EditorClassIdentifier: 
   cardType: 0
-  nameCard: Soldier
+  nameCard: Soldado
   manaCost: 3
   health: 10
   damage: 2
   descriptionCard: Soldado de Arkania
   effect: 0
-  spriteCard: {fileID: 5390608158925771267, guid: 6bb3cfaab0af03346b5a766022a49d54, type: 3}
+  spriteCard: {fileID: 21300000, guid: 3d8279d64794f4d449448e6b364fe9ca, type: 3}

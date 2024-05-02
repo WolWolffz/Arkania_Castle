@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Thunder
   m_EditorClassIdentifier: 
   cardType: 2
-  nameCard: Thunder
+  nameCard: Livro
   manaCost: 2
   health: 0
   damage: 10
   descriptionCard: Desfere 10 de dano ao inimigos da sala.
   effect: 2
-  spriteCard: {fileID: 8607225190688500780, guid: c28af5a7c41f94443b0b5e675513c455, type: 3}
+  spriteCard: {fileID: 21300000, guid: 21434da2c3a304a43980908c65b405e6, type: 3}
