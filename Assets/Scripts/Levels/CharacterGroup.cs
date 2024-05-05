@@ -24,19 +24,30 @@ public class CharacterGroup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<SpriteRenderer>().enabled = false;
+        
         arena = GetComponentInParent<Arena>();
         enemiesSlots = transform.Find("Enemies");
         alliesSlots = transform.Find("Allies");
 
-        enemyFightPosition = transform.Find("Enemy Fight").position;
-        allieFightPosition = transform.Find("Allie Fight").position;
+        var enemyFight = transform.Find("Enemy Fight");
+        var allieFight = transform.Find("Allie Fight");
+        
+        enemyFight.GetComponent<SpriteRenderer>().enabled = false;
+        allieFight.GetComponent<SpriteRenderer>().enabled = false;
+
+        enemyFightPosition = enemyFight.position;
+        allieFightPosition = allieFight.position;
+
 
         foreach (Transform child in enemiesSlots)
         {
+            child.GetComponent<SpriteRenderer>().enabled = false;
             enemiesSlotsPositions.Add(child.position);
         }
         foreach (Transform child in alliesSlots)
         {
+            child.GetComponent<SpriteRenderer>().enabled = false;
             alliesSlotsPositions.Add(child.position);
         }
 
