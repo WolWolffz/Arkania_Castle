@@ -22,8 +22,9 @@ public class AnimationController : MonoBehaviour
         
     }
 
-    public void MovementAnimation(string state){
+    public void SetAnimation(string state){
         var animation = Animator.StringToHash(state);
         animator.CrossFade(animation, 0, 0);
     }
+
 }

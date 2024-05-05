@@ -6,23 +6,30 @@ using UnityEngine;
 
 public class CharacterGroup : MonoBehaviour
 {
+    private Arena arena;
     private Transform enemiesSlots;
     private Transform alliesSlots;
-    public List<Vector3> enemiesSlotsPositions = new List<Vector3>();
-    public List<Vector3> alliesSlotsPositions = new List<Vector3>();
     private int totalEnemiesSlots;
     private int totalAlliesSlots;
 
+    public List<Vector3> enemiesSlotsPositions = new List<Vector3>();
+    public List<Vector3> alliesSlotsPositions = new List<Vector3>();
     public List<Allie> allies = new List<Allie>();
     public List<Enemy> enemies = new List<Enemy>();
+    public Vector3 allieFightPosition;
+    public Vector3 enemyFightPosition;
     public int freeEnemiesSlots;
-    public int freeAlliesSlots;
+    public int freeAlliesSlots; 
 
     // Start is called before the first frame update
     void Start()
     {
+        arena = GetComponentInParent<Arena>();
         enemiesSlots = transform.Find("Enemies");
         alliesSlots = transform.Find("Allies");
+
+        enemyFightPosition = transform.Find("Enemy Fight").position;
+        allieFightPosition = transform.Find("Allie Fight").position;
 
         foreach (Transform child in enemiesSlots)
         {
@@ -76,6 +83,7 @@ public class CharacterGroup : MonoBehaviour
             yield return new WaitForSeconds(Character.speed * 0.06f);
         }
         foreach(Allie allie in toRemove) allies.Remove(allie);
+        arena.isFighting = allies.Count > 0 && enemies.Count > 0;
         OrderTroops();
     }
 

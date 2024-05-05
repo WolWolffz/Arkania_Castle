@@ -38,18 +38,6 @@ public class Arena : MonoBehaviour
 
     void Update()
     {
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //     RaycastHit hit;
-        //     if (Physics.Raycast(ray, out hit))
-        //     {
-        //         //Select stage
-        //         Debug.Log(hit.transform.name);
-        //     }
-        // }
-
-        // Debug.Log(ways.Count.ToString());
     }
 
     void OnMouseOver()
@@ -114,6 +102,7 @@ public class Arena : MonoBehaviour
             if (characterGroup.allies.IndexOf(component) < 0)
             {
                 characterGroup.allies.Add(component);
+                component.characterGroup = characterGroup;
                 component.Move(
                     new List<Vector3>
                     {
