@@ -28,7 +28,6 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
     public virtual void Start()
     {
-        //characterGroup = GetComponentInParent<CharacterGroup>();
         lastPosition = transform.position;
         movePoints.Add(transform.position);
         animationController = GetComponent<AnimationController>();
