@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Arena : MonoBehaviour
@@ -36,9 +37,7 @@ public class Arena : MonoBehaviour
         );
     }
 
-    void Update()
-    {
-    }
+    void Update() { }
 
     void OnMouseOver()
     {
@@ -58,7 +57,7 @@ public class Arena : MonoBehaviour
             spriteRenderer.color = unselectedColor;
     }
 
-    public void MoveTroops(Arena toArena)
+    public void MoveAllies(Arena toArena)
     {
         Way way = null;
         foreach (Way upWay in upWays)
@@ -72,12 +71,38 @@ public class Arena : MonoBehaviour
 
         if (way != null && toArena.characterGroup.freeAlliesSlots > 0)
         {
-            characterGroup.MoveTroops(toArena.characterGroup, way);
+            characterGroup.MoveAllies(toArena.characterGroup, way);
         }
         else
         {
-            gameManager.level.CantMoveTroops(toArena);
+            gameManager.level.CantMoveAllies(toArena);
         }
+    }
+
+    public void MoveEnemies()
+    {
+        List<Arena> bottomArenas = new List<Arena>();
+        foreach (Way way in downWays)
+        {
+            bottomArenas.Add(way.bottomArena);
+        }
+
+        bottomArenas = bottomArenas.OrderByDescending(a => a.characterGroup.freeEnemiesSlots).ToList();
+
+        foreach (Arena bottomArena in bottomArenas){
+            if(bottomArena.downWays.Count > 0){
+                //characterGroup.MoveEnemies(bottomArena.characterGroup, //way entre as duas);
+            }
+        }
+
+            // if (toArena.characterGroup.freeEnemiesSlots > 0)
+            // {
+            //     characterGroup.MoveEnemies(toArena.characterGroup, way);
+            // }
+            // else
+            // {
+            //     //gameManager.level.CantMoveAllies(toArena);
+            // }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -94,8 +119,7 @@ public class Arena : MonoBehaviour
                 if (downWays.IndexOf(component) < 0)
                     downWays.Add(component);
         }
-
-        if (collision.gameObject.GetComponent<Allie>() != null)
+        else if (collision.gameObject.GetComponent<Allie>() != null)
         {
             var component = collision.gameObject.GetComponent<Allie>();
 
@@ -113,6 +137,24 @@ public class Arena : MonoBehaviour
                 );
             }
         }
+        else if (collision.gameObject.GetComponent<Enemy>() != null)
+        {
+            var component = collision.gameObject.GetComponent<Enemy>();
+
+            if (characterGroup.enemies.IndexOf(component) < 0)
+            {
+                characterGroup.enemies.Add(component);
+                component.characterGroup = characterGroup;
+                component.Move(
+                    new List<Vector3>
+                    {
+                        characterGroup.enemiesSlotsPositions[
+                            characterGroup.enemies.IndexOf(component)
+                        ]
+                    }
+                );
+            }
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -121,7 +163,7 @@ public class Arena : MonoBehaviour
         // {
         //     var component = collision.gameObject.GetComponent<Allie>();
         //     characterGroup.allies.Remove(component);
-        //     characterGroup.OrderTroops();
+        //     characterGroup.OrderAllies();
         // }
     }
 }

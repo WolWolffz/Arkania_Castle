@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour
 {
-    private List<Arena> arenas = new List<Arena>();
+    public List<Arena> arenas = new List<Arena>();
 
     // Start is called before the first frame update
     void Start()

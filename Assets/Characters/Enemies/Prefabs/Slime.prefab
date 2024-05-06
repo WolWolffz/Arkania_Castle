@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &299499701392728173
 Transform:
   m_ObjectHideFlags: 0
@@ -184,8 +184,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b11b69a92577c1498aa17058b6f8f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementFlags: {x: 0, y: 0}
+  characterGroup: {fileID: 0}
   isMoving: 0
+  isFighting: 0
+  fightFinishTriggered: 0
+  life: 1
+  damage: 1
 --- !u!114 &580004528805236375
 MonoBehaviour:
   m_ObjectHideFlags: 0
