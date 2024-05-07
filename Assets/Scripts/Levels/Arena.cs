@@ -56,7 +56,25 @@ public class Arena : MonoBehaviour
         else
             spriteRenderer.color = unselectedColor;
     }
+    
+    public void attackRound(List<List<Characters>> chars)
+    {
+        List<Characters> attackers = chars[0];
+        List<Characters> defensors = chars[1];
+        List<List<Characters>> result = new List<List<Characters>>();
+        for (int i = 0; i < attackers.Count; i++)
+        {
+            if (defensors[0].life > 0)
+            {
+                attackers.Attack(attackers[i],defensors[0])
+            }
+            List<List<Characters>> temp = characterGroup.listsSort(attackers, defensors);
+            attackers = temp[0];
+            defensors = temp[1];
+        }
+    }
 
+}
     public void MoveAllies(Arena toArena)
     {
         Way way = null;

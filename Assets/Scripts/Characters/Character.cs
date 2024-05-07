@@ -144,17 +144,19 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void Attack(Character character)
+    public void Attack(Character attacker Character deffensor)
     {
         isFighting = true;
-        target = character;
+        from = attacker
+        to = deffensor;
         Invoke("StartAttack", 0.6f);
     }
 
     private void StartAttack()
     {
         UpdateAnimation("Attack");
-        target.life -= damage;
+        to.life -= from.damage;
+        from.life -= from.damage;
         Invoke("FinishAttack", attackAnimDuration * 1.25f);
     }
 
