@@ -28,10 +28,10 @@ public class CameraController : MonoBehaviour
         camx = camera.transform.position.x;
         camy = camera.transform.position.y;
         if(Input.GetKey(KeyCode.UpArrow) && camy < UpperBound){
-            Vector3 v3 = new Vector3(camx,+0.01f);
+            Vector3 v3 = new Vector3(camx,+0.05f);
             camera.transform.Translate(v3);
         }else if(Input.GetKey(KeyCode.DownArrow) && camy > LowerBound){
-            Vector3 v3 = new Vector3(camx,-0.01f);
+            Vector3 v3 = new Vector3(camx,-0.05f);
             camera.transform.Translate(v3);
         }
    }
