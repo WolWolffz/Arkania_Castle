@@ -56,7 +56,7 @@ public class Arena : MonoBehaviour
         else
             spriteRenderer.color = unselectedColor;
     }
-    
+
     public void attackRound(List<List<Characters>> chars)
     {
         List<Characters> attackers = chars[0];
@@ -66,7 +66,7 @@ public class Arena : MonoBehaviour
         {
             if (defensors[0].life > 0)
             {
-                attackers.Attack(attackers[i],defensors[0])
+                attackers[i].Attack(attackers[i],defensors[0])
             }
             List<List<Characters>> temp = characterGroup.listsSort(attackers, defensors);
             attackers = temp[0];
