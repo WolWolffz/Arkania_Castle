@@ -103,15 +103,15 @@ public class CharacterGroup : MonoBehaviour
         OrderAllies();
     }
     
-    static List<List<Characters>> listsSort(List<Allie> allies, List<Enemy> enemies)
+    public List<List<Character>> ListsSort(List<Character> allies, List<Character> enemies)
     {
-        List<List<Characters>> result = new List<List<Characters>>();
+        List<List<Character>> result = new List<List<Character>>();
         if (allies.Count > enemies.Count || allies.Count == enemies.Count)
         {
-            allies = allies.OrderByDescending(c => c.damage).ToList();
-            enemies = enemies.OrderByDescending(c => c.life).ToList();
-            result.Add(allies);
-            result.Add(enemies);
+            var orderedAllies = allies.OrderByDescending(c => c.damage).ToList();
+            var orderedEnemies = enemies.OrderByDescending(c => c.life).ToList();
+            result.Add(orderedAllies);
+            result.Add(orderedEnemies);
             return result;
         }
         else
@@ -143,7 +143,7 @@ public class CharacterGroup : MonoBehaviour
             yield return new WaitForSeconds(Character.speed * 0.06f);
         }
         foreach(Enemy enemy in toRemove) enemies.Remove(enemy);
-        arena.isFighting = enemies.Count > 0 && enemies.Count > 0;
+        arena.isFighting = allies.Count > 0 && enemies.Count > 0;
         OrderEnemies();
     }
 
