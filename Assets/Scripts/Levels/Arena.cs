@@ -29,12 +29,23 @@ public class Arena : MonoBehaviour
     {
         gameManager = GameManager.instance;
 
-        unselectedColor = spriteRenderer.color;
-        selectedColor = new Color(
-            unselectedColor.r / 2,
-            unselectedColor.g / 2,
-            unselectedColor.b / 2
+        var currentColor = spriteRenderer.color;
+        
+        unselectedColor = new Color(
+            currentColor.r,
+            currentColor.g,
+            currentColor.b,
+            0f
         );
+
+        selectedColor = new Color(
+            currentColor.r,
+            currentColor.g,
+            currentColor.b,
+            0.25f
+        );
+
+        spriteRenderer.color = unselectedColor;
     }
 
     void Update() { }

@@ -12,6 +12,7 @@ public class Way : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
+        GetComponent<SpriteRenderer>().enabled = false;
         topPosition = transform.Find("Top").transform.position;
         bottomPosition = transform.Find("Bottom").transform.position;
     }
