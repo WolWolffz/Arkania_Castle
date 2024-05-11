@@ -59,7 +59,11 @@ public class Arena : MonoBehaviour
 
     public void AttackRound()
     {
-        List<List<Character>> chars = characterGroup.ListsSort(characterGroup.allies, characterGroup.enemies);
+        List<Character> allies = characterGroup.allies.Cast<Character>().ToList();
+        List<Character> enemies = characterGroup.enemies.Cast<Character>().ToList();
+        
+        List<List<Character>> chars = characterGroup.ListsSort(allies, enemies);
+
         List<Character> attackers = chars[0];
         List<Character> defensors = chars[1];
         for (int i = 0; i < attackers.Count; i++)
