@@ -18,6 +18,7 @@ public class Arena : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color unselectedColor,
         selectedColor;
+    private Vector3 clickOrigin, clickDest;
 
     void Awake()
     {
@@ -29,6 +30,7 @@ public class Arena : MonoBehaviour
     {
         gameManager = GameManager.instance;
 
+        clickDest = Vector3.zero;
         var currentColor = spriteRenderer.color;
         
         unselectedColor = new Color(
@@ -54,8 +56,21 @@ public class Arena : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && gameManager.isControlEnabled)
         {
-            gameManager.level.ArenaClicked(this);
+            clickOrigin = Input.mousePosition;
         }
+
+        if (Input.GetMouseButtonUp(0) && gameManager.isControlEnabled)
+        {
+            clickDest = Input.mousePosition;
+
+            if(clickOrigin.y > clickDest.y-2 && clickOrigin.y < clickDest.y+2){
+                clickDest = Vector3.up;
+                gameManager.level.ArenaClicked(this);
+            }
+        }
+
+        
+        
     }
 
     public void Select(bool value)
