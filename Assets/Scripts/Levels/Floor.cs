@@ -9,6 +9,7 @@ public class Floor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<SpriteRenderer>().enabled = false;
         foreach (Transform child in transform)
         {
             var component = child.GetComponent<Arena>();
