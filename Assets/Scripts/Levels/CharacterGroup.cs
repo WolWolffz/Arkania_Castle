@@ -102,7 +102,28 @@ public class CharacterGroup : MonoBehaviour
         arena.isFighting = allies.Count > 0 && enemies.Count > 0;
         OrderAllies();
     }
+    
+    public List<List<Character>> ListsSort(List<Character> allies, List<Character> enemies)
+    {
+        List<List<Character>> result = new List<List<Character>>();
+        if (allies.Count > enemies.Count || allies.Count == enemies.Count)
+        {
+            var orderedAllies = allies.OrderByDescending(c => c.damage).ToList();
+            var orderedEnemies = enemies.OrderByDescending(c => c.life).ToList();
+            result.Add(orderedAllies);
+            result.Add(orderedEnemies);
+            return result;
+        }
+        else
+        {
+            allies = allies.OrderByDescending(c => c.life).ToList();
+            enemies = enemies.OrderByDescending(c => c.damage).ToList();
+            result.Add(enemies);
+            result.Add(allies);
+            return result;
+        }
 
+    }
     IEnumerator MoveEnemiesDelayed(CharacterGroup toCharacterGroup, Way byWay){
         int nEnemies = enemies.Count;
         int nFreeEnemiesSlots = toCharacterGroup.freeEnemiesSlots;
@@ -122,7 +143,7 @@ public class CharacterGroup : MonoBehaviour
             yield return new WaitForSeconds(Character.speed * 0.06f);
         }
         foreach(Enemy enemy in toRemove) enemies.Remove(enemy);
-        arena.isFighting = enemies.Count > 0 && enemies.Count > 0;
+        arena.isFighting = allies.Count > 0 && enemies.Count > 0;
         OrderEnemies();
     }
 

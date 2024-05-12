@@ -113,7 +113,6 @@ public class Character : MonoBehaviour
         target = character;
         Invoke("StartAttack", 0.6f);
     }
-
     private void StartAttack()
     {
         UpdateAnimation("Attack");
