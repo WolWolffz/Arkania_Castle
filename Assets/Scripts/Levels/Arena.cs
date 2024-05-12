@@ -35,6 +35,8 @@ public class Arena : MonoBehaviour
             unselectedColor.g / 2,
             unselectedColor.b / 2
         );
+
+        //Invoke("AttackRound",3);
     }
 
     void Update() { }
@@ -57,7 +59,10 @@ public class Arena : MonoBehaviour
             spriteRenderer.color = unselectedColor;
     }
 
-    public void AttackRound()
+    public void AttackRound(){
+        StartCoroutine(AttackRoundDelayed());
+    }
+    public IEnumerator AttackRoundDelayed()
     {
         List<Character> allies = characterGroup.allies.Cast<Character>().ToList();
         List<Character> enemies = characterGroup.enemies.Cast<Character>().ToList();
@@ -65,16 +70,16 @@ public class Arena : MonoBehaviour
         List<List<Character>> chars = characterGroup.ListsSort(allies, enemies);
 
         List<Character> attackers = chars[0];
-        List<Character> defensors = chars[1];
+        List<Character> defensors = chars[1];        
         for (int i = 0; i < attackers.Count; i++)
-        {
+        {   
             if (defensors[0].life > 0)
             {
                 attackers[i].Attack(defensors[0]);
                 defensors[0].Attack(attackers[i]);
             }
+            yield return new WaitForSeconds(0.33f*1.25f+1f);
             List<List<Character>> temp = characterGroup.ListsSort(attackers, defensors);
-            attackers = temp[0];
             defensors = temp[1];
         }
         
