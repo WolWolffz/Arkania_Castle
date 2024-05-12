@@ -27,6 +27,8 @@ public class Level : MonoBehaviour
         }
     }
 
+
+
     // Update is called once per frame
     void Update() { }
 
@@ -89,6 +91,7 @@ public class Level : MonoBehaviour
         }
 
         arenas.Reverse();
+        //StartCoroutine
         MoveEnemiesPerArena(arenas);
     }
 
