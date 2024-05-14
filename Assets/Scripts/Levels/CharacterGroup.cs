@@ -75,10 +75,7 @@ public class CharacterGroup : MonoBehaviour
         StartCoroutine(MoveAlliesDelayed(toCharacterGroup, byWay));
     }
 
-    public void MoveEnemies(CharacterGroup toCharacterGroup, Way byWay)
-    {
-        StartCoroutine(MoveEnemiesDelayed(toCharacterGroup, byWay));
-    }
+    
 
     IEnumerator MoveAlliesDelayed(CharacterGroup toCharacterGroup, Way byWay){
         int nAllies = allies.Count;
@@ -99,7 +96,6 @@ public class CharacterGroup : MonoBehaviour
             yield return new WaitForSeconds(Character.speed * 0.06f);
         }
         foreach(Allie allie in toRemove) allies.Remove(allie);
-        arena.isFighting = allies.Count > 0 && enemies.Count > 0;
         OrderAllies();
     }
     
@@ -124,10 +120,18 @@ public class CharacterGroup : MonoBehaviour
         }
 
     }
+
+    public void MoveEnemies(CharacterGroup toCharacterGroup, Way byWay)
+    {
+        StartCoroutine(MoveEnemiesDelayed(toCharacterGroup, byWay));
+    }
+
+
     IEnumerator MoveEnemiesDelayed(CharacterGroup toCharacterGroup, Way byWay){
         int nEnemies = enemies.Count;
         int nFreeEnemiesSlots = toCharacterGroup.freeEnemiesSlots;
         int nMoves = Math.Min(nEnemies, nFreeEnemiesSlots);
+
         List<Enemy> toRemove = new List<Enemy>();
 
         for (int i = 0; i < nMoves; i++)
@@ -139,11 +143,10 @@ public class CharacterGroup : MonoBehaviour
             };
             enemies[i].Move(movePoints);
             toRemove.Add(enemies[i]);
-
             yield return new WaitForSeconds(Character.speed * 0.06f);
         }
         foreach(Enemy enemy in toRemove) enemies.Remove(enemy);
-        arena.isFighting = allies.Count > 0 && enemies.Count > 0;
+        
         OrderEnemies();
     }
 

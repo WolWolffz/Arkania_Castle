@@ -9,6 +9,7 @@ public class Level : MonoBehaviour
     private List<Floor> floors = new List<Floor>();
     private Arena fromArena;
     private Arena toArena;
+    private string lastTurn = "PLAYER";
 
     public GameObject deniedFX;
 
@@ -26,12 +27,55 @@ public class Level : MonoBehaviour
             if (component != null)
                 floors.Add(component);
         }
+
+        PlayerTurn();
     }
 
-
-
     // Update is called once per frame
-    void Update() { }
+    void Update()
+    {
+        if (gameManager.gameTurn != lastTurn)
+        {
+            lastTurn = gameManager.gameTurn;
+
+            switch (gameManager.gameTurn)
+            {
+                case "PLAYER":
+                    PlayerTurn();
+                    break;
+
+                case "ENEMY":
+                    EnemyTurn();
+                    break;
+
+                case "BATTLE":
+                    BattleTurn();
+                    break;
+            }
+        }
+    }
+
+    void PlayerTurn() { }
+
+    void EnemyTurn()
+    {
+        // While enemy mana > 0  ||  Enemy Turn flag
+        // SpawnEnemies();
+        MoveEnemies();
+    }
+
+    void BattleTurn()
+    {
+        foreach (Floor floor in floors)
+        {
+            foreach (Arena arena in floor.arenas)
+            {
+                if (arena.isFighting)
+                    arena.AttackRound();
+            }
+        }
+        // Wait Battle Turn flag
+    }
 
     public void CantMoveAllies(Arena arena)
     {
@@ -91,9 +135,12 @@ public class Level : MonoBehaviour
             }
         }
 
-        arenas.Reverse();
-        //StartCoroutine
-        MoveEnemiesPerArena(arenas);
+        // foreach (Arena arena in arenas)
+        // {
+        //     arena.MoveEnemies();
+        // }
+        //arenas.Reverse();
+        StartCoroutine(MoveEnemiesPerArena(arenas));
     }
 
     IEnumerator MoveEnemiesPerArena(List<Arena> arenas)
@@ -101,7 +148,9 @@ public class Level : MonoBehaviour
         foreach (Arena arena in arenas)
         {
             arena.MoveEnemies();
-            yield return new WaitForSeconds(Character.speed * 0.07f * arena.characterGroup.enemies.Count);
+            yield return new WaitForSeconds(
+                Character.speed * 0.07f * arena.characterGroup.enemies.Count + 1f
+            );
         }
     }
 

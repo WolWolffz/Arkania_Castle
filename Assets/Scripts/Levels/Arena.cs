@@ -18,7 +18,8 @@ public class Arena : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color unselectedColor,
         selectedColor;
-    private Vector3 clickOrigin, clickDest;
+    private Vector3 clickOrigin,
+        clickDest;
 
     void Awake()
     {
@@ -32,47 +33,36 @@ public class Arena : MonoBehaviour
 
         clickDest = Vector3.zero;
         var currentColor = spriteRenderer.color;
-        
-        unselectedColor = new Color(
-            currentColor.r,
-            currentColor.g,
-            currentColor.b,
-            0f
-        );
 
-        selectedColor = new Color(
-            currentColor.r,
-            currentColor.g,
-            currentColor.b,
-            0.25f
-        );
+        unselectedColor = new Color(currentColor.r, currentColor.g, currentColor.b, 0f);
+
+        selectedColor = new Color(currentColor.r, currentColor.g, currentColor.b, 0.25f);
 
         spriteRenderer.color = unselectedColor;
         //Invoke("AttackRound",3);
-
     }
 
-    void Update() { }
+    void Update() {
+        isFighting = characterGroup.allies.Count > 0 && characterGroup.enemies.Count > 0;
+    }
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && gameManager.isControlEnabled)
+        if (Input.GetMouseButtonDown(0) && gameManager.canSpawnAndMove)
         {
             clickOrigin = Input.mousePosition;
         }
 
-        if (Input.GetMouseButtonUp(0) && gameManager.isControlEnabled)
+        if (Input.GetMouseButtonUp(0) && gameManager.canSpawnAndMove)
         {
             clickDest = Input.mousePosition;
 
-            if(clickOrigin.y > clickDest.y-2 && clickOrigin.y < clickDest.y+2){
+            if (clickOrigin.y > clickDest.y - 2 && clickOrigin.y < clickDest.y + 2)
+            {
                 clickDest = Vector3.up;
                 gameManager.level.ArenaClicked(this);
             }
         }
-
-        
-        
     }
 
     public void Select(bool value)
@@ -85,34 +75,35 @@ public class Arena : MonoBehaviour
             spriteRenderer.color = unselectedColor;
     }
 
-    public void AttackRound(){
+    public void AttackRound()
+    {
         StartCoroutine(AttackRoundDelayed());
     }
+
     public IEnumerator AttackRoundDelayed()
     {
         List<Character> allies = characterGroup.allies.Cast<Character>().ToList();
         List<Character> enemies = characterGroup.enemies.Cast<Character>().ToList();
-        
+
         List<List<Character>> chars = characterGroup.ListsSort(allies, enemies);
 
         List<Character> attackers = chars[0];
-        List<Character> defensors = chars[1];        
+        List<Character> defensors = chars[1];
         for (int i = 0; i < attackers.Count; i++)
-        {   
+        {
             if (defensors[0].life > 0)
             {
                 attackers[i].Attack(defensors[0]);
                 defensors[0].Attack(attackers[i]);
             }
-            yield return new WaitForSeconds(0.33f*1.25f+1f);
+            yield return new WaitForSeconds(0.33f * 1.25f + 1f);
             List<List<Character>> temp = characterGroup.ListsSort(attackers, defensors);
             defensors = temp[1];
         }
-        
+
         characterGroup.OrderAllies();
         characterGroup.OrderEnemies();
     }
-
 
     public void MoveAllies(Arena toArena)
     {
@@ -139,27 +130,27 @@ public class Arena : MonoBehaviour
     public void MoveEnemies()
     {
         List<Arena> bottomArenas = new List<Arena>();
+        List<Way> wayToBottomArenas = new List<Way>();
         foreach (Way way in downWays)
         {
             bottomArenas.Add(way.bottomArena);
+            wayToBottomArenas.Add(way);
         }
 
-        bottomArenas = bottomArenas.OrderByDescending(a => a.characterGroup.freeEnemiesSlots).ToList();
+        bottomArenas = bottomArenas
+            .OrderByDescending(a => a.characterGroup.freeEnemiesSlots)
+            .ToList();
 
-        foreach (Arena bottomArena in bottomArenas){
-            if(bottomArena.downWays.Count > 0){
-                //characterGroup.MoveEnemies(bottomArena.characterGroup, //way entre as duas);
-            }
+        //var a = characterGroup.enemies.Count - bottomArenas[0].characterGroup.freeEnemiesSlots;
+
+        for (int i = 0; i < bottomArenas.Count; i++)
+        {
+            // if (bottomArenas[i].downWays.Count > 0)
+            // {
+                characterGroup.MoveEnemies(bottomArenas[i].characterGroup, wayToBottomArenas[i]);
+                break;
+            // }
         }
-
-            // if (toArena.characterGroup.freeEnemiesSlots > 0)
-            // {
-            //     characterGroup.MoveEnemies(toArena.characterGroup, way);
-            // }
-            // else
-            // {
-            //     //gameManager.level.CantMoveAllies(toArena);
-            // }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
