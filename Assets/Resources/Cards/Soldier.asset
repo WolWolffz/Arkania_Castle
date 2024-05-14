@@ -19,4 +19,4 @@ MonoBehaviour:
   damage: 2
   descriptionCard: Soldado de Arkania
   effect: 0
-  spriteCard: {fileID: 21300000, guid: 3d8279d64794f4d449448e6b364fe9ca, type: 3}
+  spriteCard: {fileID: 21300000, guid: ec88d895641fe024bb8fcdcd157840cb, type: 3}
