@@ -23,6 +23,7 @@ public class Character : MonoBehaviour
     public static float speed = 3;
     public float life = 1;
     public float damage = 1;
+    public int manaCost = 1;
 
     // Start is called before the first frame update
     public virtual void Start()
@@ -30,19 +31,18 @@ public class Character : MonoBehaviour
         lastPosition = transform.position;
         movePoints.Add(transform.position);
         animationController = GetComponent<AnimationController>();
-        //Invoke("Attack", 2f);
     }
 
     // Update is called once per frame
     public virtual void Update()
     {
-        //UpdateMovement();
         DetectMovement();
 
         if (characterGroup != null)
             UpdateAnimation();
     }
 
+    
     
 
     public void DetectMovement()
