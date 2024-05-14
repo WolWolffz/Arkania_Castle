@@ -15,6 +15,7 @@ public class Level : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<SpriteRenderer>().enabled = false;
         gameManager = GameManager.instance;
         gameManager.level = this;
 
@@ -27,19 +28,23 @@ public class Level : MonoBehaviour
         }
     }
 
+
+
     // Update is called once per frame
     void Update() { }
 
-    public void CantMoveTroops(Arena arena)
+    public void CantMoveAllies(Arena arena)
     {
         Instantiate(deniedFX, arena.transform.position, Quaternion.identity);
-        // Debug.Log("CANT MOVE TROOPS: " + arena.name);
+        // Debug.Log("CANT MOVE ALLIES: " + arena.name);
     }
 
     public void ArenaClicked(Arena arena)
     {
+        // Se primeira arena não selecionada
         if (fromArena == null)
         {
+            // Se não está em batalha e tem alguma tropa
             if (!arena.isFighting && arena.characterGroup.allies.Count > 0)
             {
                 fromArena = arena;
@@ -47,31 +52,57 @@ public class Level : MonoBehaviour
             }
             else
             {
-                CantMoveTroops(arena);
+                CantMoveAllies(arena);
             }
         }
         else
         {
-            
-                if (arena == fromArena)
-                {
-                    fromArena = null;
-                    arena.Select(false);
-                }
-                else
-                {
-                    toArena = arena;
-                    arena.Select(true);
-                    Invoke("MoveTroops", 0.2f);
-                }
-            
+            // Se arena clicada já está selecionada
+            if (arena == fromArena)
+            {
+                fromArena = null;
+                arena.Select(false);
+            }
+            else
+            {
+                toArena = arena;
+                arena.Select(true);
+                Invoke("MoveAllies", 0.2f);
+            }
         }
     }
 
-    private void MoveTroops()
+    private void MoveAllies()
     {
-        fromArena.MoveTroops(toArena);
+        fromArena.MoveAllies(toArena);
         ClearSelectedArenas();
+    }
+
+    private void MoveEnemies()
+    {
+        List<Arena> arenas = new List<Arena>();
+
+        foreach (Floor floor in floors)
+        {
+            foreach (Arena arena in floor.arenas)
+            {
+                if (arena.characterGroup.enemies.Count > 0)
+                    arenas.Add(arena);
+            }
+        }
+
+        arenas.Reverse();
+        //StartCoroutine
+        MoveEnemiesPerArena(arenas);
+    }
+
+    IEnumerator MoveEnemiesPerArena(List<Arena> arenas)
+    {
+        foreach (Arena arena in arenas)
+        {
+            arena.MoveEnemies();
+            yield return new WaitForSeconds(Character.speed * 0.07f * arena.characterGroup.enemies.Count);
+        }
     }
 
     public void ClearSelectedArenas()
