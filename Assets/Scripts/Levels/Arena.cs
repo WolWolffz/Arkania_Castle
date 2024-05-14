@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class Arena : MonoBehaviour
     private GameManager gameManager;
 
     private List<Way> upWays = new List<Way>();
-    private List<Way> downWays = new List<Way>();
+    public List<Way> downWays = new List<Way>();
     public CharacterGroup characterGroup;
 
     public bool isSelected = false;
@@ -48,16 +49,16 @@ public class Arena : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && gameManager.canSpawnAndMove)
+        if (Input.GetMouseButtonDown(0))
         {
             clickOrigin = Input.mousePosition;
         }
 
-        if (Input.GetMouseButtonUp(0) && gameManager.canSpawnAndMove)
+        if (Input.GetMouseButtonUp(0))
         {
             clickDest = Input.mousePosition;
 
-            if (clickOrigin.y > clickDest.y - 2 && clickOrigin.y < clickDest.y + 2)
+            if (clickOrigin.y > clickDest.y - 2 && clickOrigin.y < clickDest.y + 2 && gameManager.canSpawnAndMove)
             {
                 clickDest = Vector3.up;
                 gameManager.level.ArenaClicked(this);
@@ -129,27 +130,18 @@ public class Arena : MonoBehaviour
 
     public void MoveEnemies()
     {
-        List<Arena> bottomArenas = new List<Arena>();
-        List<Way> wayToBottomArenas = new List<Way>();
-        foreach (Way way in downWays)
+        List<Way> orderedDownWays = downWays;
+
+        orderedDownWays = orderedDownWays.OrderByDescending(a => a.bottomArena.characterGroup.freeEnemiesSlots).ToList();
+        
+        StartCoroutine(MoveEnemiesDelayed(orderedDownWays));
+    }
+
+    IEnumerator MoveEnemiesDelayed(List<Way> orderedDownWays){
+        for (int i = 0; i < orderedDownWays.Count; i++)
         {
-            bottomArenas.Add(way.bottomArena);
-            wayToBottomArenas.Add(way);
-        }
-
-        bottomArenas = bottomArenas
-            .OrderByDescending(a => a.characterGroup.freeEnemiesSlots)
-            .ToList();
-
-        //var a = characterGroup.enemies.Count - bottomArenas[0].characterGroup.freeEnemiesSlots;
-
-        for (int i = 0; i < bottomArenas.Count; i++)
-        {
-            // if (bottomArenas[i].downWays.Count > 0)
-            // {
-                characterGroup.MoveEnemies(bottomArenas[i].characterGroup, wayToBottomArenas[i]);
-                break;
-            // }
+            characterGroup.MoveEnemies(orderedDownWays[i].bottomArena.characterGroup, orderedDownWays[i]);
+            yield return new WaitForSeconds(Character.speed * 0.07f * characterGroup.enemies.Count + 2f);
         }
     }
 

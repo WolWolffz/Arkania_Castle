@@ -6,17 +6,23 @@ public class Level : MonoBehaviour
 {
     private GameManager gameManager;
 
-    private List<Floor> floors = new List<Floor>();
+    public List<Floor> floors = new List<Floor>();
     private Arena fromArena;
     private Arena toArena;
     private string lastTurn = "PLAYER";
+    private bool movingEnemies = false;
 
     public GameObject deniedFX;
+    public Transform enemySpawnPoint;
+    public Transform allieSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<SpriteRenderer>().enabled = false;
+        enemySpawnPoint = transform.Find("Enemy Spawn");
+        allieSpawnPoint = transform.Find("Allie Spawn");
+
         gameManager = GameManager.instance;
         gameManager.level = this;
 
@@ -59,9 +65,8 @@ public class Level : MonoBehaviour
 
     void EnemyTurn()
     {
-        // While enemy mana > 0  ||  Enemy Turn flag
-        // SpawnEnemies();
-        MoveEnemies();
+        gameManager.SpawnEnemies();
+        Invoke("MoveEnemies", 2);
     }
 
     void BattleTurn()
@@ -124,6 +129,7 @@ public class Level : MonoBehaviour
 
     private void MoveEnemies()
     {
+        movingEnemies = true;
         List<Arena> arenas = new List<Arena>();
 
         foreach (Floor floor in floors)
@@ -135,10 +141,6 @@ public class Level : MonoBehaviour
             }
         }
 
-        // foreach (Arena arena in arenas)
-        // {
-        //     arena.MoveEnemies();
-        // }
         //arenas.Reverse();
         StartCoroutine(MoveEnemiesPerArena(arenas));
     }
@@ -147,11 +149,15 @@ public class Level : MonoBehaviour
     {
         foreach (Arena arena in arenas)
         {
-            arena.MoveEnemies();
-            yield return new WaitForSeconds(
-                Character.speed * 0.07f * arena.characterGroup.enemies.Count + 1f
-            );
+            if (!arena.isFighting)
+            {
+                arena.MoveEnemies();
+                yield return new WaitForSeconds(
+                    Character.speed * 0.07f * arena.downWays.Count * arena.characterGroup.enemies.Count
+                );
+            }
         }
+        movingEnemies = false;
     }
 
     public void ClearSelectedArenas()

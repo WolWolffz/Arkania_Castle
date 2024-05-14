@@ -11,6 +11,7 @@ public class CharacterGroup : MonoBehaviour
     private Transform alliesSlots;
     private int totalEnemiesSlots;
     private int totalAlliesSlots;
+    private GameManager gameManager;
 
     public List<Vector3> enemiesSlotsPositions = new List<Vector3>();
     public List<Vector3> alliesSlotsPositions = new List<Vector3>();
@@ -26,6 +27,8 @@ public class CharacterGroup : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().enabled = false;
         
+        gameManager = GameManager.instance;
+
         arena = GetComponentInParent<Arena>();
         enemiesSlots = transform.Find("Enemies");
         alliesSlots = transform.Find("Allies");
@@ -78,6 +81,7 @@ public class CharacterGroup : MonoBehaviour
     
 
     IEnumerator MoveAlliesDelayed(CharacterGroup toCharacterGroup, Way byWay){
+        gameManager.canSpawnAndMove = false;
         int nAllies = allies.Count;
         int nFreeAlliesSlots = toCharacterGroup.freeAlliesSlots;
         int nMoves = Math.Min(nAllies, nFreeAlliesSlots);
@@ -97,6 +101,7 @@ public class CharacterGroup : MonoBehaviour
         }
         foreach(Allie allie in toRemove) allies.Remove(allie);
         OrderAllies();
+        gameManager.canSpawnAndMove = true;
     }
     
     public List<List<Character>> ListsSort(List<Character> allies, List<Character> enemies)

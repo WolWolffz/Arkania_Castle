@@ -15,6 +15,14 @@ public class Enemy : Character
     {
         base.Update();
         UpdateMovement();
+
+        if (life <= 0)
+            Die();
+    }
+
+    public void Die(){
+        characterGroup.enemies.Remove(this);
+        Destroy(gameObject);
     }
 
     void UpdateMovement()
