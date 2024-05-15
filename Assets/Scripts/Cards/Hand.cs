@@ -14,6 +14,8 @@ public class Hand : MonoBehaviour
     public GameObject cardVisibleBG;
     public List<GameObject> cardsInHand = new List<GameObject>();
 
+    private GameObject newCard;
+
     public void SetSortingLayerRecursiveForChildren(Transform parent, string layerName)
     {
         SpriteRenderer spriteRenderer = parent.GetComponent<SpriteRenderer>();
@@ -59,12 +61,61 @@ public class Hand : MonoBehaviour
         }
     }
 
+    // public void AddCardToHand(Card cardData)
+    // {
+    //     GameObject deck = GameObject.FindGameObjectWithTag("Deck");
+
+    //     GameObject newCard = Instantiate(cardPrefab, deck.transform.position, Quaternion.identity, handTransform);
+    //     cardsInHand.Add(newCard);
+
+    //     newCard.GetComponent<CardDisplay>().cardData = cardData;
+    //     UpdateHandVisual();
+    // }
+
     public void AddCardToHand(Card cardData)
     {
-        GameObject newCard = Instantiate(cardPrefab, handTransform.position, Quaternion.identity, handTransform);
-        cardsInHand.Add(newCard);
+        GameObject deck = GameObject.FindGameObjectWithTag("Deck");
+        GameObject hand = GameObject.FindGameObjectWithTag("HandPosition");
 
-        newCard.GetComponent<CardDisplay>().cardData = cardData;
+        if (deck != null && hand != null)
+        {
+            // Instancia a carta na posição do deck
+            GameObject newCard = Instantiate(cardPrefab, deck.transform.position, Quaternion.identity, handTransform);
+            cardsInHand.Add(newCard);
+
+            // Inicia a movimentação da carta para a posição da mão
+            StartCoroutine(MoveCardToHand(newCard, hand.transform.position));
+
+            newCard.GetComponent<CardDisplay>().cardData = cardData;
+            UpdateHandVisual();
+        }
+    }
+
+    // Função para mover a carta gradualmente para a posição da mão
+    private System.Collections.IEnumerator MoveCardToHand(GameObject card, Vector3 handPosition)
+    {
+        float elapsedTime = 0;
+        float moveDuration = 1.0f; // Duração do movimento (em segundos)
+
+        Vector3 startingPosition = card.transform.position;
+
+        while (elapsedTime < moveDuration)
+        {
+            // Calcula a posição intermediária usando Lerp
+
+            card.transform.position = Vector3.Lerp(startingPosition, handPosition, (elapsedTime / moveDuration));
+
+            // Atualiza o tempo decorrido
+            elapsedTime += Time.deltaTime;
+
+            // Aguarda o próximo quadro
+            yield return null;
+        }
+
+        // Garante que a carta esteja na posição final
+        card.transform.position = handPosition;
         UpdateHandVisual();
     }
+
+
 }

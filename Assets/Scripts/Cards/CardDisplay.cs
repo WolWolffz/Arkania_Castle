@@ -14,7 +14,7 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text manaText;
 
     public TMP_Text descriptionText;
-    
+
 
     void Start()
     {
@@ -31,14 +31,16 @@ public class CardDisplay : MonoBehaviour
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = cardData.spriteCard;
 
-        if (cardData.cardType == Card.CardType.Speel){
+        if (cardData.cardType == Card.CardType.Speel)
+        {
             healthText.text = null;
             damageText.text = null;
         }
-        else if (cardData.cardType == Card.CardType.Artefact){
+        else if (cardData.cardType == Card.CardType.Artefact)
+        {
             damageText.text = null;
         }
-        
+
 
 
     }
