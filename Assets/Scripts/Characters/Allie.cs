@@ -15,6 +15,15 @@ public class Allie : Character
     {
         base.Update();
         UpdateMovement();
+
+        if (life <= 0)
+            Die();
+        
+    }
+
+    public void Die(){
+        characterGroup.allies.Remove(this);
+        Destroy(gameObject);
     }
 
     void UpdateMovement()
