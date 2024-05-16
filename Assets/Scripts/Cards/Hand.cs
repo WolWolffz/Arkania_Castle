@@ -9,7 +9,6 @@ public class Hand : MonoBehaviour
     public Transform handTransform;
     public float fanSpread = 5f;
     public float cardSpacing = 1.5f;
-
     public float verticalSpacing = 0.2f;
     public GameObject cardVisibleBG;
     public List<GameObject> cardsInHand = new List<GameObject>();
@@ -61,10 +60,48 @@ public class Hand : MonoBehaviour
 
     public void AddCardToHand(Card cardData)
     {
-        GameObject newCard = Instantiate(cardPrefab, handTransform.position, Quaternion.identity, handTransform);
-        cardsInHand.Add(newCard);
+        GameObject deck = GameObject.FindGameObjectWithTag("Deck");
+        GameObject hand = GameObject.FindGameObjectWithTag("HandPosition");
 
-        newCard.GetComponent<CardDisplay>().cardData = cardData;
+        if (deck != null && hand != null)
+        {
+            // Instancia a carta na posição do deck
+            GameObject newCard = Instantiate(cardPrefab, deck.transform.position, Quaternion.identity, handTransform);
+            cardsInHand.Add(newCard);
+
+            // Inicia a movimentação da carta para a posição da mão
+            StartCoroutine(MoveCardToHand(newCard, hand.transform.position, cardData));
+        }
+    }
+
+    // Função para mover a carta gradualmente para a posição da mão
+    private System.Collections.IEnumerator MoveCardToHand(GameObject card, Vector3 handPosition, Card cardData)
+    {
+        float elapsedTime = 0;
+        float moveDuration = 1.0f; // Duração do movimento (em segundos)
+
+        Vector3 startingPosition = card.transform.position;
+
+        while (elapsedTime < moveDuration)
+        {
+            // Calcula a posição intermediária usando Lerp
+            card.transform.position = Vector3.Lerp(startingPosition, handPosition, elapsedTime / moveDuration);
+
+            // Atualiza o tempo decorrido
+            elapsedTime += Time.deltaTime;
+
+            // Aguarda o próximo quadro
+            yield return null;
+        }
+
+        // Garante que a carta esteja na posição final
+        card.transform.position = handPosition;
+        card.GetComponent<CardDisplay>().cardData = cardData;
+        card.GetComponent<CardDisplay>().cardPrefab = cardData.prefab;
+        card.GetComponent<CardDisplay>().UpdateCardDisplay();
+        // card.GetComponent<SpriteRenderer>().sprite = cardData.spriteCard;
+
+        // Atualiza a visualização da mão após a carta estar na posição correta
         UpdateHandVisual();
     }
 }

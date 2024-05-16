@@ -58,10 +58,21 @@ public class CardMovimentation : MonoBehaviour
     private void OnMouseUp()
     {
         isDragging = false;
-
         if (Time.time - clickTime > clickDurationThreshold)
         {
             wasClicked = false;
+        }else{
+            Debug.Log("Entrou");
+            GameObject[] limitEvokeObjects  = GameObject.FindGameObjectsWithTag("LimitEvoke");
+            if (limitEvokeObjects.Length > 0)
+            {
+                Transform limitEvokeTransform = limitEvokeObjects[0].transform;
+
+                if (limitEvokeTransform.position.y <= transform.position.y && !transform.localScale.Equals(enlargedScale))
+                {
+                    wasClicked = false;
+                }
+            }
         }
 
         if (wasClicked)
@@ -75,6 +86,16 @@ public class CardMovimentation : MonoBehaviour
                     anyoneVisible = true;
                 }
             }
+            
+            GameObject[] limitEvokeObjects = GameObject.FindGameObjectsWithTag("LimitEvoke");
+            Transform limitEvokeTransform = limitEvokeObjects[0].transform;
+
+                if (limitEvokeTransform.position.y <= transform.position.y)
+                {
+                    anyoneVisible = true;
+
+                }
+
             if (!anyoneVisible)
             {
                 objectCardVisible = Instantiate(gameObject, Vector3.zero, Quaternion.identity);
@@ -107,8 +128,6 @@ public class CardMovimentation : MonoBehaviour
             Hand handManager = FindObjectOfType<Hand>();
 
             GameObject[] limitEvokeObjects = GameObject.FindGameObjectsWithTag("LimitEvoke");
-            Debug.Log(limitEvokeObjects[0].transform.position.y);
-            Debug.Log(transform.position.y);
             if (limitEvokeObjects.Length > 0)
             {
                 Transform limitEvokeTransform = limitEvokeObjects[0].transform;
