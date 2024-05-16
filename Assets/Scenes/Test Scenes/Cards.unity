@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c981abe20a5e740b9d9e40525f07f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckManager: {fileID: 0}
+  deckManager: {fileID: 1541164334}
   cardPrefab: {fileID: 3248344836095178523, guid: 3be3077839e8ef24b9d592783cede471, type: 3}
   handTransform: {fileID: 1024559373}
   fanSpread: 5

@@ -11,8 +11,9 @@ public class CardVisible : MonoBehaviour
             CardMovimentation dragCard = handManager.cardsInHand[i].GetComponent<CardMovimentation>();
             if (dragCard.wasVisible)
             {
-                Destroy(dragCard.objectCardVisible);
+                dragCard.wasVisible = false;
                 anyoneVisible = true;
+                Destroy(dragCard.objectCardVisible);
             }
         }
 

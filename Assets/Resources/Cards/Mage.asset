@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a673b212a88dce4fbecea2d2d790926, type: 3}
-  m_Name: Soldier
+  m_Name: Mage
   m_EditorClassIdentifier: 
   cardType: 0
-  nameCard: Soldier
-  prefab: {fileID: 3684106159918720021, guid: 1bfe0c1c660ae5e4fbf9adf8abc1eacb, type: 3}
-  descriptionCard: Soldier of Arkania
+  nameCard: Mage
+  prefab: {fileID: 2345549237636252129, guid: 39aee6e29680db641a8b585c3403a087, type: 3}
+  descriptionCard: Mage of Arkania
   effect: 0
-  spriteCard: {fileID: 21300000, guid: cf6fb40fd2d3ac049bf4b4d5112eaca6, type: 3}
+  spriteCard: {fileID: 21300000, guid: 61e4da2aa4e81d54794b29469f46068f, type: 3}

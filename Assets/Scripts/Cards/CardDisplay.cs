@@ -16,17 +16,23 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text descriptionText;
 
 
-    void Start()
-    {
-        UpdateCardDisplay();
-    }
+    // void Start()
+    // {
+    //     UpdateCardDisplay();
+    // }
 
     public void UpdateCardDisplay()
     {
         nameText.text = cardData.nameCard;
-        healthText.text = cardData.health.ToString();
-        manaText.text = cardData.manaCost.ToString();
-        damageText.text = cardData.damage.ToString();
+
+        Allie alliePrefab = cardPrefab.GetComponent<Allie>();
+        if (!(alliePrefab == null))
+        {
+            healthText.text = alliePrefab.life.ToString();
+            manaText.text = alliePrefab.manaCost.ToString();
+            damageText.text = alliePrefab.damage.ToString();
+        }
+
         descriptionText.text = cardData.descriptionCard;
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = cardData.spriteCard;
