@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LimitEvoke
+  - CardVisibleBG
+  - Deck
+  - HandPosition
   layers:
   - Default
   - TransparentFX
@@ -59,9 +63,6 @@ TagManager:
   - name: Ways
     uniqueID: 2528946615
     locked: 0
-  - name: CardTopHand
-    uniqueID: 1114919891
-    locked: 0
   - name: Card 4
     uniqueID: 1498319599
     locked: 0
@@ -73,4 +74,13 @@ TagManager:
     locked: 0
   - name: Card 1
     uniqueID: 4190978951
+    locked: 0
+  - name: Deck
+    uniqueID: 1937891057
+    locked: 0
+  - name: CardVisibleBG
+    uniqueID: 1112427465
+    locked: 0
+  - name: CardVisible
+    uniqueID: 1114919891
     locked: 0

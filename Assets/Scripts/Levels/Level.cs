@@ -6,15 +6,23 @@ public class Level : MonoBehaviour
 {
     private GameManager gameManager;
 
-    private List<Floor> floors = new List<Floor>();
+    public List<Floor> floors = new List<Floor>();
     private Arena fromArena;
     private Arena toArena;
+    private string lastTurn = "PLAYER";
+    private bool movingEnemies = false;
 
     public GameObject deniedFX;
+    public Transform enemySpawnPoint;
+    public Transform allieSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<SpriteRenderer>().enabled = false;
+        enemySpawnPoint = transform.Find("Enemy Spawn");
+        allieSpawnPoint = transform.Find("Allie Spawn");
+
         gameManager = GameManager.instance;
         gameManager.level = this;
 
@@ -25,10 +33,54 @@ public class Level : MonoBehaviour
             if (component != null)
                 floors.Add(component);
         }
+
+        PlayerTurn();
     }
 
     // Update is called once per frame
-    void Update() { }
+    void Update()
+    {
+        if (gameManager.gameTurn != lastTurn)
+        {
+            lastTurn = gameManager.gameTurn;
+
+            switch (gameManager.gameTurn)
+            {
+                case "PLAYER":
+                    PlayerTurn();
+                    break;
+
+                case "ENEMY":
+                    EnemyTurn();
+                    break;
+
+                case "BATTLE":
+                    BattleTurn();
+                    break;
+            }
+        }
+    }
+
+    void PlayerTurn() { }
+
+    void EnemyTurn()
+    {
+        gameManager.SpawnEnemies();
+        Invoke("MoveEnemies", 2);
+    }
+
+    void BattleTurn()
+    {
+        foreach (Floor floor in floors)
+        {
+            foreach (Arena arena in floor.arenas)
+            {
+                if (arena.isFighting)
+                    arena.AttackRound();
+            }
+        }
+        // Wait Battle Turn flag
+    }
 
     public void CantMoveAllies(Arena arena)
     {
@@ -77,6 +129,7 @@ public class Level : MonoBehaviour
 
     private void MoveEnemies()
     {
+        movingEnemies = true;
         List<Arena> arenas = new List<Arena>();
 
         foreach (Floor floor in floors)
@@ -88,17 +141,23 @@ public class Level : MonoBehaviour
             }
         }
 
-        arenas.Reverse();
-        MoveEnemiesPerArena(arenas);
+        //arenas.Reverse();
+        StartCoroutine(MoveEnemiesPerArena(arenas));
     }
 
     IEnumerator MoveEnemiesPerArena(List<Arena> arenas)
     {
         foreach (Arena arena in arenas)
         {
-            arena.MoveEnemies();
-            yield return new WaitForSeconds(Character.speed * 0.07f * arena.characterGroup.enemies.Count);
+            if (!arena.isFighting)
+            {
+                arena.MoveEnemies();
+                yield return new WaitForSeconds(
+                    Character.speed * 0.07f * arena.downWays.Count * arena.characterGroup.enemies.Count
+                );
+            }
         }
+        movingEnemies = false;
     }
 
     public void ClearSelectedArenas()

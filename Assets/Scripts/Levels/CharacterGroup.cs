@@ -11,6 +11,7 @@ public class CharacterGroup : MonoBehaviour
     private Transform alliesSlots;
     private int totalEnemiesSlots;
     private int totalAlliesSlots;
+    private GameManager gameManager;
 
     public List<Vector3> enemiesSlotsPositions = new List<Vector3>();
     public List<Vector3> alliesSlotsPositions = new List<Vector3>();
@@ -26,6 +27,8 @@ public class CharacterGroup : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().enabled = false;
         
+        gameManager = GameManager.instance;
+
         arena = GetComponentInParent<Arena>();
         enemiesSlots = transform.Find("Enemies");
         alliesSlots = transform.Find("Allies");
@@ -75,12 +78,10 @@ public class CharacterGroup : MonoBehaviour
         StartCoroutine(MoveAlliesDelayed(toCharacterGroup, byWay));
     }
 
-    public void MoveEnemies(CharacterGroup toCharacterGroup, Way byWay)
-    {
-        StartCoroutine(MoveEnemiesDelayed(toCharacterGroup, byWay));
-    }
+    
 
     IEnumerator MoveAlliesDelayed(CharacterGroup toCharacterGroup, Way byWay){
+        gameManager.canSpawnAndMove = false;
         int nAllies = allies.Count;
         int nFreeAlliesSlots = toCharacterGroup.freeAlliesSlots;
         int nMoves = Math.Min(nAllies, nFreeAlliesSlots);
@@ -99,14 +100,43 @@ public class CharacterGroup : MonoBehaviour
             yield return new WaitForSeconds(Character.speed * 0.06f);
         }
         foreach(Allie allie in toRemove) allies.Remove(allie);
-        arena.isFighting = allies.Count > 0 && enemies.Count > 0;
         OrderAllies();
+        gameManager.canSpawnAndMove = true;
     }
+    
+    public List<List<Character>> ListsSort(List<Character> allies, List<Character> enemies)
+    {
+        List<List<Character>> result = new List<List<Character>>();
+        if (allies.Count > enemies.Count || allies.Count == enemies.Count)
+        {
+            var orderedAllies = allies.OrderByDescending(c => c.damage).ToList();
+            var orderedEnemies = enemies.OrderByDescending(c => c.life).ToList();
+            result.Add(orderedAllies);
+            result.Add(orderedEnemies);
+            return result;
+        }
+        else
+        {
+            allies = allies.OrderByDescending(c => c.life).ToList();
+            enemies = enemies.OrderByDescending(c => c.damage).ToList();
+            result.Add(enemies);
+            result.Add(allies);
+            return result;
+        }
+
+    }
+
+    public void MoveEnemies(CharacterGroup toCharacterGroup, Way byWay)
+    {
+        StartCoroutine(MoveEnemiesDelayed(toCharacterGroup, byWay));
+    }
+
 
     IEnumerator MoveEnemiesDelayed(CharacterGroup toCharacterGroup, Way byWay){
         int nEnemies = enemies.Count;
         int nFreeEnemiesSlots = toCharacterGroup.freeEnemiesSlots;
         int nMoves = Math.Min(nEnemies, nFreeEnemiesSlots);
+
         List<Enemy> toRemove = new List<Enemy>();
 
         for (int i = 0; i < nMoves; i++)
@@ -118,11 +148,10 @@ public class CharacterGroup : MonoBehaviour
             };
             enemies[i].Move(movePoints);
             toRemove.Add(enemies[i]);
-
             yield return new WaitForSeconds(Character.speed * 0.06f);
         }
         foreach(Enemy enemy in toRemove) enemies.Remove(enemy);
-        arena.isFighting = enemies.Count > 0 && enemies.Count > 0;
+        
         OrderEnemies();
     }
 
