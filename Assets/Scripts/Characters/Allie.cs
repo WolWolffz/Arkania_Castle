@@ -23,7 +23,7 @@ public class Allie : Character
 
     public void Die(){
         characterGroup.allies.Remove(this);
-        Destroy(gameObject, 1);
+        Destroy(gameObject, 0.35f);
     }
 
     void UpdateMovement()

@@ -20,7 +20,7 @@ public class Character : MonoBehaviour
     public bool isMoving = false;
     public bool isFighting = false;
     public bool fightFinishTriggered = false;
-    public static float speed = 3;
+    public static float speed = 3.5f;
     public float life = 1;
     public float damage = 1;
     public int manaCost = 1;

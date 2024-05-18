@@ -188,8 +188,9 @@ MonoBehaviour:
   isMoving: 0
   isFighting: 0
   fightFinishTriggered: 0
-  life: 1
-  damage: 1
+  life: 2
+  damage: 3
+  manaCost: 1
 --- !u!114 &4004245704328896159
 MonoBehaviour:
   m_ObjectHideFlags: 0

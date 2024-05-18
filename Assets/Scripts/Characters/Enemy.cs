@@ -22,7 +22,7 @@ public class Enemy : Character
 
     public void Die(){
         characterGroup.enemies.Remove(this);
-        Destroy(gameObject, 1);
+        Destroy(gameObject, 0.35f);
     }
 
     void UpdateMovement()

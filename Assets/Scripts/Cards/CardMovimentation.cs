@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CardMovimentation : MonoBehaviour
 {
+    private GameManager gameManager;
+
     private bool isDragging = false;
     private bool wasClicked = false;
     public GameObject objectCardVisible;
@@ -15,6 +17,8 @@ public class CardMovimentation : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameManager.instance;
+        
         handManager = FindObjectOfType<Hand>();
 
         if (!handManager.cardVisibleBG)
@@ -135,8 +139,12 @@ public class CardMovimentation : MonoBehaviour
                 if (limitEvokeTransform.position.y <= transform.position.y)
                 {
                     int index = handManager.cardsInHand.IndexOf(gameObject);
+                    GameObject card = handManager.cardsInHand[index];
+                    CardDisplay displayCard = card.GetComponent<CardDisplay>();
+
                     if (index != -1)
                     {
+                        gameManager.SpawnAllie(displayCard.cardPrefab.GetComponent<Allie>());
                         handManager.cardsInHand.RemoveAt(index);
                     }
 

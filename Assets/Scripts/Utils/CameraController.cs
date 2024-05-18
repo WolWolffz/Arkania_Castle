@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour
             camera = Camera.main;
         }
 
-        upperBound = gameManager.level.transform.localScale.y/2 - gameManager.level.transform.localScale.y/3;
+        upperBound = gameManager.level.transform.localScale.y/2 - gameManager.level.transform.localScale.y/3 + 1f;
         lowerBound = camera.transform.position.y;
     }
 
