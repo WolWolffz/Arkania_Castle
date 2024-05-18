@@ -1305,11 +1305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  camx: 0
-  camy: 0
-  gameManager: {fileID: 0}
-  UpperBound: 0
-  LowerBound: 0
+  upperBound: 0
+  lowerBound: 0
 --- !u!1001 &640369480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7958,7 +7955,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -12, y: -14, z: 0}
-  m_Size: {x: 15, y: 40, z: 1}
+  m_Size: {x: 21, y: 40, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -8661,7 +8658,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 6312372861133504583}
   gameTurn: PLAYER
-  isControlEnabled: 1
+  canSpawnAndMove: 1
+  enemiesList: []
+  playerMana: 4
+  playerMaxMana: 4
+  enemyMana: 4
+  enemyMaxMana: 4
 --- !u!4 &1603249476
 Transform:
   m_ObjectHideFlags: 0
