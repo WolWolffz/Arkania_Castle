@@ -8659,7 +8659,12 @@ MonoBehaviour:
   level: {fileID: 6312372861133504583}
   gameTurn: PLAYER
   canSpawnAndMove: 1
-  enemiesList: []
+  enemiesList:
+  - {fileID: 8299367704016255009, guid: 063fac948cd04024790a9c4b7c4a9f6a, type: 3}
+  - {fileID: 1724380703579446516, guid: 570306206e39040448e2ddb6266b5cd4, type: 3}
+  - {fileID: 5889786638010049221, guid: 83f97e69884bde945b5cd4a78c6cdc6a, type: 3}
+  - {fileID: 4062852924418481131, guid: c468e781571ff104d910499b1f351183, type: 3}
+  - {fileID: 5254302658738514566, guid: 2e7fc3a9b04989f43994e49a38629490, type: 3}
   playerMana: 4
   playerMaxMana: 4
   enemyMana: 4
