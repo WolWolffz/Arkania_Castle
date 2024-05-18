@@ -12,10 +12,10 @@ public class GameManager : MonoBehaviour
     public bool canSpawnAndMove = true;
     public List<Enemy> enemiesList = new List<Enemy>();
 
-    public int playerMana = 4;
-    public int playerMaxMana = 4;
-    public int enemyMana = 4;
-    public int enemyMaxMana = 4;
+    public int playerMana = 3;
+    public int playerMaxMana = 3;
+    public int enemyMana = 3;
+    public int enemyMaxMana = 3;
 
     void Awake()
     {

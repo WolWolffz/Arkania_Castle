@@ -153,7 +153,7 @@ public class Level : MonoBehaviour
             {
                 arena.MoveEnemies();
                 yield return new WaitForSeconds(
-                    Character.speed * 0.07f * arena.downWays.Count * arena.characterGroup.enemies.Count
+                    Character.speed * 0.07f * arena.downWays.Count * arena.characterGroup.enemies.Count + 1f
                 );
             }
         }
