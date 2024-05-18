@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a673b212a88dce4fbecea2d2d790926, type: 3}
+  m_Name: Mage
+  m_EditorClassIdentifier: 
+  cardType: 0
+  nameCard: Mage
+  prefab: {fileID: 2345549237636252129, guid: 39aee6e29680db641a8b585c3403a087, type: 3}
+  descriptionCard: Mage of Arkania
+  effect: 0
+  spriteCard: {fileID: 21300000, guid: 61e4da2aa4e81d54794b29469f46068f, type: 3}

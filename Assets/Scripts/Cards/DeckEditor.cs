@@ -4,22 +4,29 @@ using UnityEngine;
 
 
 #if UNITY_EDITOR
-    using UnityEditor;
-    [CustomEditor(typeof(Deck))]
+using UnityEditor;
+[CustomEditor(typeof(Deck))]
 
 
-    public class DeckEditor : Editor
+public class DeckEditor : Editor
+{
+    public override void OnInspectorGUI()
     {
-        public override void OnInspectorGUI(){
-            DrawDefaultInspector();
+        DrawDefaultInspector();
 
-            Deck deckManager = (Deck)target;
-            if (GUILayout.Button("Draw New Card")){
-                Hand handManager = FindObjectOfType<Hand>();
-                if (handManager != null){
-                    deckManager.DrawCard(handManager);
-                }
+        Deck deckManager = (Deck)target;
+        if (GUILayout.Button("Draw New Card"))
+        {
+            deckManager.DrawCard();
+        }
+        if (GUILayout.Button("Fill Hand"))
+        {
+            Hand handManager = FindObjectOfType<Hand>();
+            if (handManager != null)
+            {
+                deckManager.CallFillHand();
             }
-        }    
+        }
     }
+}
 #endif

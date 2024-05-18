@@ -6,6 +6,8 @@ TagManager:
   tags:
   - LimitEvoke
   - CardVisibleBG
+  - Deck
+  - HandPosition
   layers:
   - Default
   - TransparentFX
@@ -72,6 +74,9 @@ TagManager:
     locked: 0
   - name: Card 1
     uniqueID: 4190978951
+    locked: 0
+  - name: Deck
+    uniqueID: 1937891057
     locked: 0
   - name: CardVisibleBG
     uniqueID: 1112427465

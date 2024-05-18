@@ -8,10 +8,6 @@ namespace CardScript
     {
         public CardType cardType;
         public string nameCard;
-        public int manaCost;
-        public int health;
-        public int damage;
-
         public GameObject prefab;
 
         public string descriptionCard;
