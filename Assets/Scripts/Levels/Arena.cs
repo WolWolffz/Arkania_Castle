@@ -40,7 +40,7 @@ public class Arena : MonoBehaviour
         selectedColor = new Color(currentColor.r, currentColor.g, currentColor.b, 0.25f);
 
         spriteRenderer.color = unselectedColor;
-        Invoke("AttackRound",3);
+        //Invoke("AttackRound",3);
     }
 
     void Update() {
