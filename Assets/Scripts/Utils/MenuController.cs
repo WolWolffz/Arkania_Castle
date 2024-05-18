@@ -10,6 +10,14 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("LevelSelection");
     }
 
+    public void ConfigButton(){
+        
+    }
+
+    public void AjudaButton(){
+
+    }
+
     public void LevelButton(){
         SceneManager.LoadScene(EventSystem.current.currentSelectedGameObject.name);
     }
