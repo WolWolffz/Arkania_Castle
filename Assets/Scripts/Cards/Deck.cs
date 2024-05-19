@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CardScript;
+using System.ComponentModel;
 public class Deck : MonoBehaviour
 {
     public List<Card> allCards = new List<Card>();
     private int currentIndex = 0;
+
+    public List<int> indexOnHand = new List<int>();
 
     int limitCards = 3;
 
@@ -13,14 +16,16 @@ public class Deck : MonoBehaviour
     int cardsInHand;
 
 
-    void Start(){
-    Card[] cards = Resources.LoadAll<Card>("Cards");
-    allCards.AddRange(cards);
-    hand = GameObject.FindGameObjectWithTag("HandPosition");
-    cardsInHand = hand.transform.childCount;
-}   
+    void Start()
+    {
+        Card[] cards = Resources.LoadAll<Card>("Cards");
+        allCards.AddRange(cards);
+        hand = GameObject.FindGameObjectWithTag("HandPosition");
+        cardsInHand = hand.transform.childCount;
+    }
 
-    public void CallFillHand(){
+    public void CallFillHand()
+    {
         cardsInHand = hand.transform.childCount;
         InvokeRepeating("FillHand", 0f, 0.25f);
     }
@@ -29,7 +34,6 @@ public class Deck : MonoBehaviour
         if (cardsInHand < limitCards)
         {
             DrawCard();
-            limitCards -= 1;
         }
         else
         {
@@ -40,7 +44,7 @@ public class Deck : MonoBehaviour
 
     }
 
-public void DrawCard()
+    public void DrawCard()
     {
         Hand handManager = FindObjectOfType<Hand>();
         if (allCards.Count == 0)
@@ -49,12 +53,17 @@ public void DrawCard()
         }
 
         int randomIndex = Random.Range(0, allCards.Count);
-        
+
         Card nextCard = allCards[randomIndex];
-        
-        handManager.AddCardToHand(nextCard);
-        
+
+        if (!indexOnHand.Contains(randomIndex))
+        {
+            indexOnHand.Add(randomIndex);
+            handManager.AddCardToHand(nextCard);
+            limitCards -= 1;
+        }
         currentIndex = randomIndex;
+
     }
 
 }
