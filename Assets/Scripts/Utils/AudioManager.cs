@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager instance;
+    public static AudioManager instance;
     private AudioSource audioSource;
     private List<string> menuScenes = new List<string> { "Menu", "LevelSelection" };
     private string currentScene;
 
     public AudioClip menuMusic;
     public AudioClip actionMusic;
+
+    public Slider slider;
 
     void Awake()
     {
@@ -29,7 +32,9 @@ public class AudioManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start() { }
+    void Start() { 
+        slider = GameObject.Find("/Canvas/Config/Slider").GetComponent<Slider>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -52,5 +57,11 @@ public class AudioManager : MonoBehaviour
         audioSource.Stop();
         audioSource.clip = music;
         audioSource.Play();
+    }
+
+    public void ChangeVolume(){
+        if(slider == null)
+            slider = GameObject.Find("/Canvas/Config/Slider").GetComponent<Slider>();
+        audioSource.volume = slider.value;
     }
 }

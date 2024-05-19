@@ -21,6 +21,8 @@ public class Arena : MonoBehaviour
         selectedColor;
     private Vector3 clickOrigin,
         clickDest;
+    public bool isPlayerSpawn;
+    public bool isEnemySpawn;
 
     void Awake()
     {

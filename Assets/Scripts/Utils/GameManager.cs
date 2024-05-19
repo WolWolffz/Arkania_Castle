@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     private TMP_Text turnText;
     private TMP_Text manaText;
 
+    public int debugInt;
+    private int lastDebugInt;
     void Awake()
     {
         instance = this;
@@ -34,7 +37,15 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update() { 
-        manaText.SetText(""+playerMana);
+        if(manaText != null)
+            manaText.SetText(""+playerMana);
+        if(debugInt != lastDebugInt){
+            lastDebugInt = debugInt;
+            switch(debugInt){
+                case 1: Win();break;
+                case 2: Defeat();break;
+            }
+        }
     }
 
     public void NextTurn()
@@ -86,4 +97,37 @@ public class GameManager : MonoBehaviour
             SpawnEnemy(enemiesList[x]);
         }
     }
+
+    public void Defeat(){
+        GameObject.Find("/Canvas/Cards Set").SetActive(false);
+        GameObject canvas = GameObject.Find("/Canvas");
+        Instantiate(Resources.Load("DefeatScreen", typeof(GameObject)), canvas.GetComponent<Transform>().position, canvas.GetComponent<Transform>().rotation, canvas.transform);
+    }
+
+    public void Win(){
+        GameObject.Find("/Canvas/Cards Set").SetActive(false);
+        GameObject canvas = GameObject.Find("/Canvas");
+        Instantiate(Resources.Load("WinScreen", typeof(GameObject)), canvas.GetComponent<Transform>().position, canvas.GetComponent<Transform>().rotation, canvas.transform);
+    }
+
+    public void EndGameOption(int option){
+        /*
+        Lista de cases. A ação do botão para mudança de tela deve passar como parâmetro um int, seguindo um desses casos
+        0 = MainMenu
+        1 = reiniciar fase ativa
+        2 = ir para a proxima fase
+        3 = ir para seleção de fase
+        */
+        switch (option){
+            case 0: SceneManager.LoadScene("Menu"); break;
+            case 1: SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); break;
+            case 2: SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); break;
+            case 3: SceneManager.LoadScene("LevelSelection"); break;
+        }
+    } 
+
+    public void SetMute(bool mute){
+        AudioManager.instance.GetComponent<AudioSource>().mute = mute;
+    }
+
 }
