@@ -16,6 +16,8 @@ public class Level : MonoBehaviour
     public Transform enemySpawnPoint;
     public Transform allieSpawnPoint;
 
+    public Deck deckManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,8 @@ public class Level : MonoBehaviour
             if (component != null)
                 floors.Add(component);
         }
+
+        deckManager = GameObject.Find("/Canvas/Cards Set/DeckManager").GetComponent<Deck>();
 
         PlayerTurn();
     }
@@ -61,7 +65,9 @@ public class Level : MonoBehaviour
         }
     }
 
-    void PlayerTurn() { }
+    void PlayerTurn() { 
+        deckManager.CallFillHand();
+    }
 
     void EnemyTurn()
     {
@@ -153,7 +159,7 @@ public class Level : MonoBehaviour
             {
                 arena.MoveEnemies();
                 yield return new WaitForSeconds(
-                    Character.speed * 0.07f * arena.downWays.Count * arena.characterGroup.enemies.Count + 1f
+                    Character.speed * 0.07f * arena.downWays.Count * arena.characterGroup.enemies.Count + 2f
                 );
             }
         }

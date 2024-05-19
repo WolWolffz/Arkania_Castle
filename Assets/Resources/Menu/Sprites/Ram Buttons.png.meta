@@ -121,7 +121,4123 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ram Buttons_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 337
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375eb266706b4b84b8a84d9327e3d57c
+      internalID: -2065488595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 337
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd585a6179ee26c4388e0f5a0201b15d
+      internalID: -1966313429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 337
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb7012a214a9bd45830a35075ca035b
+      internalID: 705826864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 337
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7c049cdfb55f343916648a7a6acbb6
+      internalID: 1342775517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_4
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 337
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00b237cc8935da49bcdb52a7d5ca216
+      internalID: -424829800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 337
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e4cfda413a70b49ad029527d50b164
+      internalID: 98962629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f970bd003030e574e85416faff1334f7
+      internalID: -1286634055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_7
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 352
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf9abb8175e0634e9bed49373380723
+      internalID: -168342303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_8
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 353
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf0efd314ac1254c9a2ad397cd3bdc9
+      internalID: -325037730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_9
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 352
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c7a36fbeeef954493a5e24b1ed193a
+      internalID: 1402549273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_10
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 352
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922004a2ea8162141a234e6ed8751414
+      internalID: -1461518901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_11
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 353
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bba1a7fce844041a5ef409630b8596
+      internalID: 809236331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_12
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 353
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6eea99746fbff4e888e8cb1df2c17b
+      internalID: 1934050733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_13
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 352
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc95e3ed3992244bae1fdad4bbedb12
+      internalID: -2117897833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_14
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 353
+        width: 5
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc30b5a4b16dcb04ea94eda604bdde07
+      internalID: 555471572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_15
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 352
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a942f6aff858df749b7ebc007b38ec47
+      internalID: 1190076727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 353
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d29ac4a05e1884fa29e9fb2dfefc87
+      internalID: 1202522249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_17
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 353
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e567598205d20e4ca3a279218b7f595
+      internalID: -1641609647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_18
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 354
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb3c158c92269245845a8c1302bdf84
+      internalID: 138337196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_19
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 354
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cd2b18993ffd747bf61141e3be33bd
+      internalID: 36705382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_20
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 337
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c41e0ac39c25de439e6fd9fc10ff9c5
+      internalID: 2141640525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_21
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 337
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461ff9c023e7aba49ac5429b8adb78d9
+      internalID: 1706422195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 304
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b9e471fbe19d94fa0589e2fb47f310
+      internalID: 833973980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_23
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 337
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3afc19883b802148aa00cda54da3ff1
+      internalID: -1316520238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_24
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 337
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3f93d4d4e1ff64ea938e9574548a84
+      internalID: -1004958769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_25
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 337
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bfca16ae683514f881fad4834a2d24
+      internalID: 273789964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_26
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 337
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae695e8103da9d48b464d6a6d1b89ae
+      internalID: -713885889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_27
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 337
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219351bb87970334a80641bc4bda105b
+      internalID: -401818668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_28
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 337
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52639fa0d8740d3429a64027e80cd2a1
+      internalID: 91632920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_29
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 337
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf305b1857e7b73449f48106abc195fe
+      internalID: 1593286884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_30
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 337
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d245d13ddefe3544bc4540105f603d5
+      internalID: -2008906239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_31
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 305
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e6f8250b0725a49847df85eee159c5
+      internalID: -1407945969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_32
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 305
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da320560d75bf54ab2a2f10619bcfb6
+      internalID: 1515772444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_33
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 305
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7352261855e74e749859b6186c9e0e40
+      internalID: 1804638085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_34
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 305
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7986d9f165df64082c36ef3e7eecc9
+      internalID: -1116769034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_35
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 305
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ea9cd1caf36a64ebdbb97d421ac1ad
+      internalID: 1405280938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_36
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 305
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79559e77fbe91054e8c658d03eb3e891
+      internalID: 1887570529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_37
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 321
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ddc822a0e662084dbcfe20ed8879351
+      internalID: 1701613220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_38
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 322
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755781cfdddc38a4586cd7b2b7d11f71
+      internalID: 1652924164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_39
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 320
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac2635bde9aac84f93e829f558765f4
+      internalID: -611326376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_40
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 320
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06249ee5b5f6664ebf89bd317baa324
+      internalID: 287721649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_41
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 320
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7943571c9755ac54a9d23f7cd1f4fc58
+      internalID: -1742968595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_42
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 320
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703f377c0512d7f4a94eb14ddbfa1946
+      internalID: 587520044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_43
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 320
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d8cbaf01539d24f8bd4cbe571d4d42
+      internalID: 213871089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_44
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 320
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653de69247850844b92836f25c4b1adc
+      internalID: -1458782944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_45
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 320
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28f4a408b9f540469c3cad48d45bd4c
+      internalID: -1293402451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_46
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 323
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fb4af5456f07e45973f90316cfa926
+      internalID: -1002994035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_47
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 306
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328328f1838d51244a58fddf927fa02d
+      internalID: -1594165566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_48
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 306
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539b95cfe634b9f4fa2872673ab33c7f
+      internalID: -1090630545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_49
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 305
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0021d8f820a9c348b4942f9ca18908e
+      internalID: 647856960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_50
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 304
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91af12785541183429f8d0d6f8c276a9
+      internalID: -805012395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_51
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 304
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a5e71d10558744581a516e12d25f61
+      internalID: 600720876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_52
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 304
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2723e59c5a53ab4e8a97ddefd783bea
+      internalID: 460765126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_53
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 304
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5519d10451707894987a8cf85d84794d
+      internalID: 1564631564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_54
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 304
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26424e75ac431464e867e6e66682f68c
+      internalID: 1610141824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_55
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 306
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f28ee328989bfb4f9fa911541c5e8c0
+      internalID: -473172573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_56
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 305
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4684b532d1d89b143b5d3b937f4f29f5
+      internalID: 2062106233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_57
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 305
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfaa70917620ccd4ea57754fa9652fd1
+      internalID: 400777540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_58
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 273
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495a3eb65820b1e4981917a060ab7569
+      internalID: 1428856882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_59
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 273
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a8b2fd387370544b23af2ceccfb830
+      internalID: -1256504576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_60
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 273
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebb1878868cc384281d5d9fd231ef82
+      internalID: -1407653531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_61
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 273
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4154c58ffe099442b0b8d0891c92e7d
+      internalID: -1959950846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_62
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 273
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9db8662812af74eb475ef706a5991f
+      internalID: -249953297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_63
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 273
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80a9b0d8989b4a45b6c98a30ab3e622
+      internalID: -1491274750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_64
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 241
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4169307524515ce42995abfd36d7e0be
+      internalID: 609618191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_65
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 241
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4951eb704bf40714784c020df3f5d791
+      internalID: 942879028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_66
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 241
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cd598202e7b834683a52cb8c504037
+      internalID: 415194551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_67
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 241
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773aa98d1d475bc4eb3a9a6b82917805
+      internalID: -1380077548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_68
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 241
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3850686c1a969489812eb65a731867
+      internalID: 1666172892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_69
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 241
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f74a9be7a9602a4c9b5f253346e92a4
+      internalID: -1245005003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_70
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 209
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58efd2d5130821a4581b2352b36a5e41
+      internalID: -881716214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_71
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 209
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe4705e1b83c44498682b4d4220f416
+      internalID: -518441249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_72
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 209
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5662f244fe2e289459d44a19af2930bb
+      internalID: 1618202749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_73
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 209
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c601b6bbff9a03f4292b26b34932c685
+      internalID: 1457060901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_74
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 209
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cac00e23aa1a5c41bc246e7b73cd2f7
+      internalID: -774276515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_75
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 209
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6895fbcff01149a46a9edf39ade85055
+      internalID: -1638145099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 62
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfa43392f90f3c4ab97aa2379980a97
+      internalID: 164388595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_77
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 192
+        width: 62
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8e1c7700f62104185b1d6a818ac635
+      internalID: 1583191794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_78
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 62
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adbec48a1ac5ba4686a2c94499d5703
+      internalID: -1799249808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_79
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241bead74ccec5f4cae862ba2cd29b8e
+      internalID: 634677344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_80
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 192
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c995eee92755696468ec9c2e217d913c
+      internalID: -1956493422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_81
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 192
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587687349c6518b409cb93a8e8638ddc
+      internalID: -2127738474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_82
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf46bdbd3542804c962a354777ad0df
+      internalID: 1069891468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_83
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df8609690f4a004b84bb78b23521919
+      internalID: 1871859727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_84
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 192
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa021a948dc8fe54888094464f50a3eb
+      internalID: 345087359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477c5d46cd5df3d439a82f1bf7373f54
+      internalID: -785492944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_86
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 176
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b29f9b9bd40da4b912beeb7b52daa1
+      internalID: -2053844021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_87
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab89de3d9a0cd9947aa92813cab16df3
+      internalID: -1136613260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_88
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 176
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92bbab294e2bb945bb8225d9a2f5045
+      internalID: -904639209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_89
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 176
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ccf1d5a26959747b096045f1d12022
+      internalID: -2000292255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_90
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 176
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc5a23e119c6cd408d85ed333a95428
+      internalID: -22311864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_91
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 176
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6aa249476176b4982ca5eb42b35fc7
+      internalID: 1226367167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_92
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 176
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a9e0165d8cdbe49bb1b7443485fea8
+      internalID: 1945573834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_93
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 176
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28028df8c33a16f4cb5c03872040993e
+      internalID: 506402728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 53
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07cce6e0e7566d48bbd698c87eba490
+      internalID: 1077767307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_95
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 53
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97cc1209be3f8ee49a91edda3d524ee4
+      internalID: -1354825344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_96
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 53
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae43c4e6f9db3e438178d29838071be
+      internalID: -1748055937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_97
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24404fb1e12e55146935d1de90f47a8b
+      internalID: -2125445261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_98
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164aee375e0ab504699528e3f22421ac
+      internalID: 405859913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_99
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 160
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a80ddb8ec5e0a4485a2cd80d502bc9
+      internalID: 1719780976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_100
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 160
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d18296d461ea74bba4721b3596dbaa
+      internalID: 179535520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_101
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4d55baf0a805241b1c0b62dbd7c868
+      internalID: -606625965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_102
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 160
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0235664463a55d549968d974d273f69c
+      internalID: -876160522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_103
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 55
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d3c9b15d39a824a919f2079072f3dd
+      internalID: 834802740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_104
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 55
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e980cb6c8fd73541ac1a1028dcd4e4d
+      internalID: 450596996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_105
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 144
+        width: 55
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975215ddd48d7db4ca1d947901472699
+      internalID: -1165170428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_106
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 144
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37b08617c4ac4148bcd068ff22c5afe
+      internalID: -944739453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_107
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 144
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caf613c1b1d97845a0e0f8c61f94083
+      internalID: -1307515965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_108
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 144
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee85709eb9315824d928539ef7ce79f9
+      internalID: -1189221669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_109
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 144
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d11365db0094c143ae4a90fe86b18f2
+      internalID: -1836658529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_110
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 144
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe1200d2000fa142bb3fd9cb764b765
+      internalID: -1484443018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_111
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 144
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2786c9ee7bd0fdb4fbeb030c42faa6f1
+      internalID: -52718326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 71
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3022e0e4e7a1f2b40bed7ea66b035204
+      internalID: -1738689401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_113
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 71
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dac3384639cb14a8e7c36dc0d99c5a
+      internalID: -551630831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_114
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 71
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb2210c0d627bd47a94e15426129dc2
+      internalID: 546846423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_115
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 128
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efe50bd2455ca64e83ccfe5bc651855
+      internalID: -1064772459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_116
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 128
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2451b19915adf442a3bc8433d33d77f
+      internalID: 1627915609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_117
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 128
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8410d5d96d7e434d87ae4d91c2374e6
+      internalID: -1372932729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_118
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e736db5394c093542bb9f107c20aa44a
+      internalID: -318880079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_119
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec87d1aec90b7c448c8699c64328e00
+      internalID: 534558468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_120
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 128
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedda0a7937a0fb47847aac6555fe8ec
+      internalID: -383039778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_121
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 73
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b89f1d16118ee4a8ca96e5a03d0999
+      internalID: 1677912766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_122
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 73
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae3e338b4a319744b71802fff4ada5e
+      internalID: -2015590432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_123
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 73
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771ba2bb8df9dd942b921d1c028d944f
+      internalID: -1428697375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_124
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 112
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89612459fca35347b77b42e84d8fece
+      internalID: 879066697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_125
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 112
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16ede2b6029d6046a42398466f61ba9
+      internalID: 1959290652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_126
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 112
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67eaa49a758fa7b48811507e8afee3b6
+      internalID: 17030609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_127
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 112
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1084cac748ca4724cad3d0f264b55ca0
+      internalID: -1650378173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_128
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 112
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77cc605ab16c184fb36514704f2f146
+      internalID: -560994291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_129
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 112
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe12faeeba0319429e8d67e0e88c55f
+      internalID: -1967617982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac546124e8c6d8c44975944c9be8a688
+      internalID: -97676911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_131
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 96
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ab283d9f902cf4695b1512e5c83d72
+      internalID: -1823391732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_132
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9dd920315e35f46a1a641ff1b338e0
+      internalID: -977632182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_133
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 96
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9306b0bf6faf62d4d92f96db56fa7084
+      internalID: 1012303879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_134
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e5dfe7ec6e87a4489cb1b61f232649
+      internalID: -335810275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_135
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 96
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91765c05de5d4f84a965201c47d03ab5
+      internalID: -23786722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_136
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f342484c03f914a896423c1e9c0433
+      internalID: 27859340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_137
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 96
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b5450b7b8e6c34eb748d1e790f358c
+      internalID: 675140326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_138
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 96
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4996b9e08d5c22c4b912989656071cde
+      internalID: 2067072302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_139
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 96
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea20329a74403b439822efd26c52297
+      internalID: -1085433480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_140
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85946c6dd6b4e3443871290a1114311d
+      internalID: -1411395077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_141
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 96
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ece1d9b063de6469922a0874d697c5
+      internalID: -385300266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_142
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 80
+        width: 80
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45422f3939f681b4fa7f33d68e705e3e
+      internalID: 1564555036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_143
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 80
+        width: 80
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39983082e1347c84c80fbd88100d1346
+      internalID: -1041598332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_144
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 80
+        width: 80
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e455f309692bb2747bf5f0868d56aa05
+      internalID: -1424636109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_145
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 80
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287a8c39d2f5a36469bf3328dc50ec39
+      internalID: 1013946612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_146
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 80
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081a2bb72ab2a2744a72e879aeeb2919
+      internalID: 7668588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_147
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 80
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dce8ec4b577ab24983687a800790138
+      internalID: 1306653187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_148
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 80
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9ff4e74789d6f40804c269763acaa3
+      internalID: 152473434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_149
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 80
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ef8fde45ddfd64dafc8a9249f74bdd
+      internalID: 1089796594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_150
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 80
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fddd93cbabca6a40a421eceda1f4e7a
+      internalID: -849951699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_151
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 80
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba8c31c4fc0e1444989856e556b990a
+      internalID: -1047284387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_152
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 80
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eada83877b73dd4bb4a4a0b716f82cf
+      internalID: 1605593499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_153
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 80
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d77071069b945489a60a35a87b2140
+      internalID: -564298249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_154
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290c609b487588f4aa6a55a4e6720b06
+      internalID: 880357602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_155
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db18672688d44341b9dd42014d5b087
+      internalID: 1516352087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_156
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 64
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d14a41cbb0d2942a5488f3bccb1b14
+      internalID: -1178405987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_157
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bb3d945d48189479b706ead179224d
+      internalID: -348321357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_158
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d921175be3921749b17bbf0e4f23f9d
+      internalID: -302588160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_159
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 64
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615e02dae19ae5b4a8b3438d945069df
+      internalID: -487956917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 82
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5052523fa63802042999cbb286e7c5be
+      internalID: 129592433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_161
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 82
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1d1f20dee6cda49b2e38561e1f878d
+      internalID: 1979583738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_162
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 82
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5e1683b0276c141a6ba52e4ac17e05
+      internalID: -51595251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_163
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 48
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45801e155437fb4fbb1972ed7122bca
+      internalID: 896174841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_164
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 48
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb0ab649f994cb42bb8b01546c6b07d
+      internalID: 2052394450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_165
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 48
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2989d677cabb00340840b4c367c399a5
+      internalID: 1890110528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_166
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 48
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f095bac597c27584cbe6bf8c0a1b391e
+      internalID: -353254826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_167
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 48
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0791e3886f11cc409b8933a684ef41c
+      internalID: 715068492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_168
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 48
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35835616fea535e4e8ba1f1a78f6675b
+      internalID: -637526535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_169
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 89
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be01d4bcdb68e7148aed9a8cead97392
+      internalID: 720258484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_170
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 89
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95798c4269cf5842aee8763a707d268
+      internalID: -252191325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_171
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 89
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053d12b4b1e77734cb44c9465a1b60ff
+      internalID: -1757869518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_172
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20b16c5be6e5dc44bfe65441e73e899
+      internalID: -1287036248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_173
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 32
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fabde5996fa3624d8a41b61f691bd43
+      internalID: 1870658138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_174
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 32
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46030be25d02c042a66ea879a71c571
+      internalID: -1687789552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_175
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 32
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220fe26625579624db18f2c80b80472b
+      internalID: -937378111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_176
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 32
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7347fe8c9e0b6a44bf46b2f62bc32e3
+      internalID: -208700009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_177
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 32
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690675a4112feba4190d20f095494936
+      internalID: 1381893747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_178
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 98
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1009bac72df604c91b68437899b0c3
+      internalID: 324120025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_179
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 98
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee70f38dfaaa2384eadca11c121ba63c
+      internalID: 1953280110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_180
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 16
+        width: 98
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09bcd50fc6b4294f9d5621b020b1d43
+      internalID: -1767078029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_181
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 16
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0c5923a3c0e97468d6cb65db4d125f
+      internalID: 1863700116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_182
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 16
+        width: 44
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81839cb78c7867d4481f3e1e360c25f2
+      internalID: 708756039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_183
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 16
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da5445db2a3bb242aa626957818a9ea
+      internalID: 314062577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_184
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 16
+        width: 44
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e03fceebba652c40a2124952aba5eb8
+      internalID: -1216821348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_185
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 16
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32becd71684fd214a87c1ad176b75522
+      internalID: 1914375420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_186
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 16
+        width: 44
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776b80d8e2c015848bbb959137aa53f8
+      internalID: 650094198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_187
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 109
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c33817d21af114d9847e079638c5aa
+      internalID: 904721455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_188
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 109
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c009b1f791a083c49930ae3fd656ff1a
+      internalID: 1426897557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_189
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 109
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebfca90513ebfa43829da5d195abe3b
+      internalID: -897750026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_190
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3e20acafca3ef40ba621a30ff33a12
+      internalID: 243634940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_191
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 55
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a49438d437ccb14db4a51aa96d90430
+      internalID: 1986884107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_192
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3969e71627e766e42a3b3c95c303841b
+      internalID: -642082245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_193
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 55
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec67734f056b304482088f5235b8817
+      internalID: -793185842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_194
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d606f2ee8f9be4344b727bb0150a45b2
+      internalID: -578402396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ram Buttons_195
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 55
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89252f15f3ecea4c840c6b799fda72d
+      internalID: -1912208065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +4248,203 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ram Buttons_0: -2065488595
+      Ram Buttons_1: -1966313429
+      Ram Buttons_10: -1461518901
+      Ram Buttons_100: 179535520
+      Ram Buttons_101: -606625965
+      Ram Buttons_102: -876160522
+      Ram Buttons_103: 834802740
+      Ram Buttons_104: 450596996
+      Ram Buttons_105: -1165170428
+      Ram Buttons_106: -944739453
+      Ram Buttons_107: -1307515965
+      Ram Buttons_108: -1189221669
+      Ram Buttons_109: -1836658529
+      Ram Buttons_11: 809236331
+      Ram Buttons_110: -1484443018
+      Ram Buttons_111: -52718326
+      Ram Buttons_112: -1738689401
+      Ram Buttons_113: -551630831
+      Ram Buttons_114: 546846423
+      Ram Buttons_115: -1064772459
+      Ram Buttons_116: 1627915609
+      Ram Buttons_117: -1372932729
+      Ram Buttons_118: -318880079
+      Ram Buttons_119: 534558468
+      Ram Buttons_12: 1934050733
+      Ram Buttons_120: -383039778
+      Ram Buttons_121: 1677912766
+      Ram Buttons_122: -2015590432
+      Ram Buttons_123: -1428697375
+      Ram Buttons_124: 879066697
+      Ram Buttons_125: 1959290652
+      Ram Buttons_126: 17030609
+      Ram Buttons_127: -1650378173
+      Ram Buttons_128: -560994291
+      Ram Buttons_129: -1967617982
+      Ram Buttons_13: -2117897833
+      Ram Buttons_130: -97676911
+      Ram Buttons_131: -1823391732
+      Ram Buttons_132: -977632182
+      Ram Buttons_133: 1012303879
+      Ram Buttons_134: -335810275
+      Ram Buttons_135: -23786722
+      Ram Buttons_136: 27859340
+      Ram Buttons_137: 675140326
+      Ram Buttons_138: 2067072302
+      Ram Buttons_139: -1085433480
+      Ram Buttons_14: 555471572
+      Ram Buttons_140: -1411395077
+      Ram Buttons_141: -385300266
+      Ram Buttons_142: 1564555036
+      Ram Buttons_143: -1041598332
+      Ram Buttons_144: -1424636109
+      Ram Buttons_145: 1013946612
+      Ram Buttons_146: 7668588
+      Ram Buttons_147: 1306653187
+      Ram Buttons_148: 152473434
+      Ram Buttons_149: 1089796594
+      Ram Buttons_15: 1190076727
+      Ram Buttons_150: -849951699
+      Ram Buttons_151: -1047284387
+      Ram Buttons_152: 1605593499
+      Ram Buttons_153: -564298249
+      Ram Buttons_154: 880357602
+      Ram Buttons_155: 1516352087
+      Ram Buttons_156: -1178405987
+      Ram Buttons_157: -348321357
+      Ram Buttons_158: -302588160
+      Ram Buttons_159: -487956917
+      Ram Buttons_16: 1202522249
+      Ram Buttons_160: 129592433
+      Ram Buttons_161: 1979583738
+      Ram Buttons_162: -51595251
+      Ram Buttons_163: 896174841
+      Ram Buttons_164: 2052394450
+      Ram Buttons_165: 1890110528
+      Ram Buttons_166: -353254826
+      Ram Buttons_167: 715068492
+      Ram Buttons_168: -637526535
+      Ram Buttons_169: 720258484
+      Ram Buttons_17: -1641609647
+      Ram Buttons_170: -252191325
+      Ram Buttons_171: -1757869518
+      Ram Buttons_172: -1287036248
+      Ram Buttons_173: 1870658138
+      Ram Buttons_174: -1687789552
+      Ram Buttons_175: -937378111
+      Ram Buttons_176: -208700009
+      Ram Buttons_177: 1381893747
+      Ram Buttons_178: 324120025
+      Ram Buttons_179: 1953280110
+      Ram Buttons_18: 138337196
+      Ram Buttons_180: -1767078029
+      Ram Buttons_181: 1863700116
+      Ram Buttons_182: 708756039
+      Ram Buttons_183: 314062577
+      Ram Buttons_184: -1216821348
+      Ram Buttons_185: 1914375420
+      Ram Buttons_186: 650094198
+      Ram Buttons_187: 904721455
+      Ram Buttons_188: 1426897557
+      Ram Buttons_189: -897750026
+      Ram Buttons_19: 36705382
+      Ram Buttons_190: 243634940
+      Ram Buttons_191: 1986884107
+      Ram Buttons_192: -642082245
+      Ram Buttons_193: -793185842
+      Ram Buttons_194: -578402396
+      Ram Buttons_195: -1912208065
+      Ram Buttons_2: 705826864
+      Ram Buttons_20: 2141640525
+      Ram Buttons_21: 1706422195
+      Ram Buttons_22: 833973980
+      Ram Buttons_23: -1316520238
+      Ram Buttons_24: -1004958769
+      Ram Buttons_25: 273789964
+      Ram Buttons_26: -713885889
+      Ram Buttons_27: -401818668
+      Ram Buttons_28: 91632920
+      Ram Buttons_29: 1593286884
+      Ram Buttons_3: 1342775517
+      Ram Buttons_30: -2008906239
+      Ram Buttons_31: -1407945969
+      Ram Buttons_32: 1515772444
+      Ram Buttons_33: 1804638085
+      Ram Buttons_34: -1116769034
+      Ram Buttons_35: 1405280938
+      Ram Buttons_36: 1887570529
+      Ram Buttons_37: 1701613220
+      Ram Buttons_38: 1652924164
+      Ram Buttons_39: -611326376
+      Ram Buttons_4: -424829800
+      Ram Buttons_40: 287721649
+      Ram Buttons_41: -1742968595
+      Ram Buttons_42: 587520044
+      Ram Buttons_43: 213871089
+      Ram Buttons_44: -1458782944
+      Ram Buttons_45: -1293402451
+      Ram Buttons_46: -1002994035
+      Ram Buttons_47: -1594165566
+      Ram Buttons_48: -1090630545
+      Ram Buttons_49: 647856960
+      Ram Buttons_5: 98962629
+      Ram Buttons_50: -805012395
+      Ram Buttons_51: 600720876
+      Ram Buttons_52: 460765126
+      Ram Buttons_53: 1564631564
+      Ram Buttons_54: 1610141824
+      Ram Buttons_55: -473172573
+      Ram Buttons_56: 2062106233
+      Ram Buttons_57: 400777540
+      Ram Buttons_58: 1428856882
+      Ram Buttons_59: -1256504576
+      Ram Buttons_6: -1286634055
+      Ram Buttons_60: -1407653531
+      Ram Buttons_61: -1959950846
+      Ram Buttons_62: -249953297
+      Ram Buttons_63: -1491274750
+      Ram Buttons_64: 609618191
+      Ram Buttons_65: 942879028
+      Ram Buttons_66: 415194551
+      Ram Buttons_67: -1380077548
+      Ram Buttons_68: 1666172892
+      Ram Buttons_69: -1245005003
+      Ram Buttons_7: -168342303
+      Ram Buttons_70: -881716214
+      Ram Buttons_71: -518441249
+      Ram Buttons_72: 1618202749
+      Ram Buttons_73: 1457060901
+      Ram Buttons_74: -774276515
+      Ram Buttons_75: -1638145099
+      Ram Buttons_76: 164388595
+      Ram Buttons_77: 1583191794
+      Ram Buttons_78: -1799249808
+      Ram Buttons_79: 634677344
+      Ram Buttons_8: -325037730
+      Ram Buttons_80: -1956493422
+      Ram Buttons_81: -2127738474
+      Ram Buttons_82: 1069891468
+      Ram Buttons_83: 1871859727
+      Ram Buttons_84: 345087359
+      Ram Buttons_85: -785492944
+      Ram Buttons_86: -2053844021
+      Ram Buttons_87: -1136613260
+      Ram Buttons_88: -904639209
+      Ram Buttons_89: -2000292255
+      Ram Buttons_9: 1402549273
+      Ram Buttons_90: -22311864
+      Ram Buttons_91: 1226367167
+      Ram Buttons_92: 1945573834
+      Ram Buttons_93: 506402728
+      Ram Buttons_94: 1077767307
+      Ram Buttons_95: -1354825344
+      Ram Buttons_96: -1748055937
+      Ram Buttons_97: -2125445261
+      Ram Buttons_98: 405859913
+      Ram Buttons_99: 1719780976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -285,8 +285,8 @@ MonoBehaviour:
   isMoving: 0
   isFighting: 0
   fightFinishTriggered: 0
-  life: 5
-  damage: 4
+  life: 7
+  damage: 2
   manaCost: 3
 --- !u!114 &5508248735615395737
 MonoBehaviour:

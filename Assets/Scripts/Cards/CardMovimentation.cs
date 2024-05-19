@@ -135,18 +135,19 @@ public class CardMovimentation : MonoBehaviour
             {
                 Transform limitEvokeTransform = limitEvokeObjects[0].transform;
 
-                if (limitEvokeTransform.position.y <= transform.position.y)
-                {
-                    int index = handManager.cardsInHand.IndexOf(gameObject);
-                    GameObject card = handManager.cardsInHand[index];
-                    CardDisplay displayCard = card.GetComponent<CardDisplay>();
+                int index = handManager.cardsInHand.IndexOf(gameObject);
+                GameObject card = handManager.cardsInHand[index];
+                CardDisplay displayCard = card.GetComponent<CardDisplay>();
 
+                int after = gameManager.playerMana - displayCard.cardPrefab.GetComponent<Allie>().manaCost;
+
+                if (limitEvokeTransform.position.y <= transform.position.y && after >= 0 )
+                {
                     if (index != -1)
                     {
                         gameManager.SpawnAllie(displayCard.cardPrefab.GetComponent<Allie>());
                         handManager.cardsInHand.RemoveAt(index);
                     }
-
                     Destroy(gameObject);
                 }
             }
