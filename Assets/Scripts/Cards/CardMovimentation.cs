@@ -18,7 +18,7 @@ public class CardMovimentation : MonoBehaviour
     private void Start()
     {
         gameManager = GameManager.instance;
-        
+
         handManager = FindObjectOfType<Hand>();
 
         if (!handManager.cardVisibleBG)
@@ -65,8 +65,10 @@ public class CardMovimentation : MonoBehaviour
         if (Time.time - clickTime > clickDurationThreshold)
         {
             wasClicked = false;
-        }else{
-            GameObject[] limitEvokeObjects  = GameObject.FindGameObjectsWithTag("LimitEvoke");
+        }
+        else
+        {
+            GameObject[] limitEvokeObjects = GameObject.FindGameObjectsWithTag("LimitEvoke");
             if (limitEvokeObjects.Length > 0)
             {
                 Transform limitEvokeTransform = limitEvokeObjects[0].transform;
@@ -89,15 +91,15 @@ public class CardMovimentation : MonoBehaviour
                     anyoneVisible = true;
                 }
             }
-            
+
             GameObject[] limitEvokeObjects = GameObject.FindGameObjectsWithTag("LimitEvoke");
             Transform limitEvokeTransform = limitEvokeObjects[0].transform;
 
-                if (limitEvokeTransform.position.y <= transform.position.y)
-                {
-                    anyoneVisible = true;
+            if (limitEvokeTransform.position.y <= transform.position.y)
+            {
+                anyoneVisible = true;
 
-                }
+            }
 
             if (!anyoneVisible)
             {
@@ -135,18 +137,28 @@ public class CardMovimentation : MonoBehaviour
             {
                 Transform limitEvokeTransform = limitEvokeObjects[0].transform;
 
-                if (limitEvokeTransform.position.y <= transform.position.y)
-                {
-                    int index = handManager.cardsInHand.IndexOf(gameObject);
-                    GameObject card = handManager.cardsInHand[index];
-                    CardDisplay displayCard = card.GetComponent<CardDisplay>();
+                int index = handManager.cardsInHand.IndexOf(gameObject);
+                GameObject card = handManager.cardsInHand[index];
+                CardDisplay displayCard = card.GetComponent<CardDisplay>();
 
+                int after = gameManager.playerMana - displayCard.cardPrefab.GetComponent<Allie>().manaCost;
+
+                if (limitEvokeTransform.position.y <= transform.position.y && after >= 0)
+                {
                     if (index != -1)
                     {
                         gameManager.SpawnAllie(displayCard.cardPrefab.GetComponent<Allie>());
+
+                        Deck deck = FindObjectOfType<Deck>();
+                        for (int j = 0; j < deck.allCards.Count; j++)
+                        {
+                            if(deck.allCards[j].Equals(handManager.cardsInHand[index].GetComponent<CardDisplay>().cardData)){
+                                deck.indexOnHand.Remove(j);
+                            }
+                        }
+
                         handManager.cardsInHand.RemoveAt(index);
                     }
-
                     Destroy(gameObject);
                 }
             }

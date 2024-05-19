@@ -190,7 +190,7 @@ MonoBehaviour:
   fightFinishTriggered: 0
   life: 5
   damage: 4
-  manaCost: 1
+  manaCost: 3
 --- !u!114 &8535981081283063203
 MonoBehaviour:
   m_ObjectHideFlags: 0
