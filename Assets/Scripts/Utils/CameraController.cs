@@ -16,11 +16,12 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         gameManager = GameManager.instance;
-        if(camera == null){
+        if (camera == null)
+        {
             camera = Camera.main;
         }
 
-        upperBound = gameManager.level.transform.localScale.y/2 - gameManager.level.transform.localScale.y/3 + 1f;
+        upperBound = gameManager.level.transform.localScale.y / 2 - gameManager.level.transform.localScale.y / 3 + 1f;
         lowerBound = camera.transform.position.y;
     }
 
@@ -37,16 +38,40 @@ public class CameraController : MonoBehaviour
         //     camera.transform.Translate(v3);
         // }
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
             dragOrigin = camera.ScreenToWorldPoint(Input.mousePosition);
 
-        if(Input.GetMouseButton(0)){
-            float difference = dragOrigin.y - camera.ScreenToWorldPoint(Input.mousePosition).y;
-            var pos = camera.transform.position;
-            pos.y += difference;
+        if (Input.GetMouseButton(0))
+        {
+            Hand handManager = FindObjectOfType<Hand>();
+            bool anyoneVisible = false;
+            for (int i = 0; i < handManager.cardsInHand.Count; i++)
+            {
+                CardMovimentation dragCard = handManager.cardsInHand[i].GetComponent<CardMovimentation>();
+                if (dragCard.wasVisible)
+                {
+                    anyoneVisible = true;
+                }
+            }
+            if (!anyoneVisible)
+            {
+                GameObject[] limitEvokeObjects = GameObject.FindGameObjectsWithTag("LimitEvoke");
+                if (limitEvokeObjects.Length > 0)
+                {
+                    Transform limitEvokeTransform = limitEvokeObjects[0].transform;
+                    Vector3 mousePosition = Input.mousePosition;
+                    Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                    if (worldMousePosition.y >= limitEvokeTransform.position.y)
+                    {
+                        float difference = dragOrigin.y - camera.ScreenToWorldPoint(Input.mousePosition).y;
+                        var pos = camera.transform.position;
+                        pos.y += difference;
 
-            if(pos.y < upperBound && pos.y > lowerBound)
-                camera.transform.position = pos;
+                        if (pos.y < upperBound && pos.y > lowerBound)
+                            camera.transform.position = pos;
+                    }
+                }
+            }
         }
-   }
+    }
 }

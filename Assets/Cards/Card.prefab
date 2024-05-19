@@ -664,7 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectCardVisible: {fileID: 0}
   wasVisible: 0
-  enlargedScale: {x: 1.5, y: 1.5, z: 1.5}
+  enlargedScale: {x: 3, y: 3, z: 3}
 --- !u!1 &5592244918227600600
 GameObject:
   m_ObjectHideFlags: 0

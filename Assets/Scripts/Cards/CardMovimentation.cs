@@ -66,7 +66,6 @@ public class CardMovimentation : MonoBehaviour
         {
             wasClicked = false;
         }else{
-            Debug.Log("Entrou");
             GameObject[] limitEvokeObjects  = GameObject.FindGameObjectsWithTag("LimitEvoke");
             if (limitEvokeObjects.Length > 0)
             {
