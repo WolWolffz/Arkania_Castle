@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -17,6 +19,9 @@ public class Level : MonoBehaviour
     public Transform allieSpawnPoint;
 
     public Deck deckManager;
+
+    public Arena PlayerSpawn;
+    public Arena EnemySpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +42,13 @@ public class Level : MonoBehaviour
         }
 
         deckManager = GameObject.Find("/Canvas/Cards Set/DeckManager").GetComponent<Deck>();
+
+        floors.ForEach(f => {
+            f.arenas.ForEach(a => {
+                    a.isPlayerSpawn = true ? PlayerSpawn = a : null;
+                    a.isEnemySpawn = true ? EnemySpawn = a : null;
+            });
+        });
 
         PlayerTurn();
     }
@@ -66,7 +78,23 @@ public class Level : MonoBehaviour
     }
 
     void PlayerTurn() { 
-        deckManager.CallFillHand();
+        if(CheckWinCondition() == 0)
+            deckManager.CallFillHand();
+        else if(CheckWinCondition() == 1){
+            gameManager.Win();
+        }else if(CheckWinCondition() == 2){
+            gameManager.Defeat();
+        }
+    }
+
+    int CheckWinCondition(){
+        //se começar o turno do jogador com uma dessas condições, retorna um resultado equivalente (int)
+        if(PlayerSpawn.characterGroup.enemies.Count > 0 && PlayerSpawn.characterGroup.allies.Count > 0)
+            return 2;
+        else if(EnemySpawn.characterGroup.allies.Count > 0)
+            return 1;
+
+        return 0;
     }
 
     void EnemyTurn()

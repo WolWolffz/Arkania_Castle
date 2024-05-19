@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Allie : Character
 {
+
+    private AudioManager audioManager;
     // Start is called before the first frame update
+    private AudioSource audioSource;
     public override void Start()
     {
         base.Start();
+        audioManager = AudioManager.instance;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,6 +26,10 @@ public class Allie : Character
             Die();
         
     }
+
+    void Awake(){
+        audioSource.mute = audioManager.GetComponent<AudioSource>().mute;
+    } 
 
     public void Die(){
         characterGroup.allies.Remove(this);

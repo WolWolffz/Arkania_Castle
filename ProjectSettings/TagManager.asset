@@ -8,6 +8,8 @@ TagManager:
   - CardVisibleBG
   - Deck
   - HandPosition
+  - WinScreen
+  - DefeatScreen
   layers:
   - Default
   - TransparentFX

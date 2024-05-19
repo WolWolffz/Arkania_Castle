@@ -12588,6 +12588,7 @@ MonoBehaviour:
   playerMaxMana: 4
   enemyMana: 4
   enemyMaxMana: 4
+  debugInt: 0
 --- !u!4 &1603249476
 Transform:
   m_ObjectHideFlags: 0
