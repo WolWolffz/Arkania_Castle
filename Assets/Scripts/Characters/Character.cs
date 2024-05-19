@@ -42,9 +42,6 @@ public class Character : MonoBehaviour
             UpdateAnimation();
     }
 
-    
-    
-
     public void DetectMovement()
     {
         var movement = (transform.position - lastPosition) / Time.deltaTime;

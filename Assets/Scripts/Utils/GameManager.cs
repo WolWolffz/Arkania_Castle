@@ -126,4 +126,8 @@ public class GameManager : MonoBehaviour
         }
     } 
 
+    public void SetMute(bool mute){
+        AudioManager.instance.GetComponent<AudioSource>().mute = mute;
+    }
+
 }

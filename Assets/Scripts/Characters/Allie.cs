@@ -7,13 +7,16 @@ public class Allie : Character
 {
 
     private AudioManager audioManager;
-    // Start is called before the first frame update
     private AudioSource audioSource;
+
+    // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
         audioManager = AudioManager.instance;
         audioSource = GetComponent<AudioSource>();
+        print("audiosource id"+audioSource.GetInstanceID());
+        audioSource.mute = audioManager.GetComponent<AudioSource>().mute;
     }
 
     // Update is called once per frame
@@ -24,12 +27,7 @@ public class Allie : Character
 
         if (life <= 0)
             Die();
-        
     }
-
-    void Awake(){
-        audioSource.mute = audioManager.GetComponent<AudioSource>().mute;
-    } 
 
     public void Die(){
         characterGroup.allies.Remove(this);
