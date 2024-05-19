@@ -44,33 +44,23 @@ public class CameraController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Hand handManager = FindObjectOfType<Hand>();
-            bool anyoneVisible = false;
+            bool anyoneDragging = false;
             for (int i = 0; i < handManager.cardsInHand.Count; i++)
             {
                 CardMovimentation dragCard = handManager.cardsInHand[i].GetComponent<CardMovimentation>();
-                if (dragCard.wasVisible)
+                if (dragCard.isDragging)
                 {
-                    anyoneVisible = true;
+                    anyoneDragging = true;
                 }
             }
-            if (!anyoneVisible)
+            if (!anyoneDragging)
             {
-                GameObject[] limitEvokeObjects = GameObject.FindGameObjectsWithTag("LimitEvoke");
-                if (limitEvokeObjects.Length > 0)
-                {
-                    Transform limitEvokeTransform = limitEvokeObjects[0].transform;
-                    Vector3 mousePosition = Input.mousePosition;
-                    Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-                    if (worldMousePosition.y >= limitEvokeTransform.position.y)
-                    {
-                        float difference = dragOrigin.y - camera.ScreenToWorldPoint(Input.mousePosition).y;
-                        var pos = camera.transform.position;
-                        pos.y += difference;
+                float difference = dragOrigin.y - camera.ScreenToWorldPoint(Input.mousePosition).y;
+                var pos = camera.transform.position;
+                pos.y += difference;
 
-                        if (pos.y < upperBound && pos.y > lowerBound)
-                            camera.transform.position = pos;
-                    }
-                }
+                if (pos.y < upperBound && pos.y > lowerBound)
+                    camera.transform.position = pos;
             }
         }
     }

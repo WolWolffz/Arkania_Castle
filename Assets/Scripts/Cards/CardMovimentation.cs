@@ -4,7 +4,7 @@ public class CardMovimentation : MonoBehaviour
 {
     private GameManager gameManager;
 
-    private bool isDragging = false;
+    public bool isDragging = false;
     private bool wasClicked = false;
     public GameObject objectCardVisible;
     public bool wasVisible = false;
