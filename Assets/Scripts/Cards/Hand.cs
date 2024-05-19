@@ -78,7 +78,7 @@ public class Hand : MonoBehaviour
     private System.Collections.IEnumerator MoveCardToHand(GameObject card, Vector3 handPosition, Card cardData)
     {
         float elapsedTime = 0;
-        float moveDuration = 1.0f; // Duração do movimento (em segundos)
+        float moveDuration = 0.25f; // Duração do movimento (em segundos)
 
         Vector3 startingPosition = card.transform.position;
 
