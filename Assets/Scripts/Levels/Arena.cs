@@ -24,6 +24,7 @@ public class Arena : MonoBehaviour
         clickDest;
     public bool isPlayerSpawn;
     public bool isEnemySpawn;
+    public bool alreadyMoved;
 
     void Awake()
     {

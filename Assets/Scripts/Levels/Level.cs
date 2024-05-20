@@ -135,6 +135,7 @@ public class Level : MonoBehaviour
         {
             foreach (Arena arena in floor.arenas)
             {
+                arena.alreadyMoved = false;
                 if (arena.isFighting)
                 {
                     fightRunningArenas.Add(arena);
@@ -156,8 +157,8 @@ public class Level : MonoBehaviour
         // Se primeira arena não selecionada
         if (fromArena == null)
         {
-            // Se não está em batalha e tem alguma tropa
-            if (!arena.isFighting && arena.characterGroup.allies.Count > 0)
+            // Se não está em batalha, tem alguma tropa e arena de origem ainda não foi utilizada para mover
+            if (!arena.isFighting && arena.characterGroup.allies.Count > 0 && !arena.alreadyMoved)
             {
                 fromArena = arena;
                 arena.Select(true);
@@ -178,6 +179,7 @@ public class Level : MonoBehaviour
             else
             {
                 toArena = arena;
+                toArena.alreadyMoved = true;
                 arena.Select(true);
                 Invoke("MoveAllies", 0.2f);
             }
