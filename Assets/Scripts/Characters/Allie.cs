@@ -15,7 +15,7 @@ public class Allie : Character
         base.Start();
         audioManager = AudioManager.instance;
         audioSource = GetComponent<AudioSource>();
-        print("audiosource id"+audioSource.GetInstanceID());
+        // print("audiosource id"+audioSource.GetInstanceID());
         audioSource.mute = audioManager.GetComponent<AudioSource>().mute;
     }
 

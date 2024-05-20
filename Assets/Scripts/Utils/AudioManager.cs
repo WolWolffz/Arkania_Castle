@@ -32,8 +32,13 @@ public class AudioManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start() { 
-        slider = GameObject.Find("/Canvas/Config/Slider").GetComponent<Slider>();
+    void Start()
+    {
+        try
+        {
+            slider = GameObject.Find("/Canvas/Config/Slider").GetComponent<Slider>();
+        }
+        catch { }
     }
 
     // Update is called once per frame
@@ -59,8 +64,9 @@ public class AudioManager : MonoBehaviour
         audioSource.Play();
     }
 
-    public void ChangeVolume(){
-        if(slider == null)
+    public void ChangeVolume()
+    {
+        if (slider == null)
             slider = GameObject.Find("/Canvas/Config/Slider").GetComponent<Slider>();
         audioSource.volume = slider.value;
     }

@@ -12,7 +12,7 @@ public class Level : MonoBehaviour
     private Arena fromArena;
     private Arena toArena;
     private string lastTurn = "PLAYER";
-    private bool movingEnemies = false;
+    public List<Arena> fightRunningArenas = new List<Arena>();
 
     public GameObject deniedFX;
     public Transform enemySpawnPoint;
@@ -43,10 +43,12 @@ public class Level : MonoBehaviour
 
         deckManager = GameObject.Find("/Canvas/Cards Set/DeckManager").GetComponent<Deck>();
 
-        floors.ForEach(f => {
-            f.arenas.ForEach(a => {
-                    a.isPlayerSpawn = true ? PlayerSpawn = a : null;
-                    a.isEnemySpawn = true ? EnemySpawn = a : null;
+        floors.ForEach(f =>
+        {
+            f.arenas.ForEach(a =>
+            {
+                a.isPlayerSpawn = true ? PlayerSpawn = a : null;
+                a.isEnemySpawn = true ? EnemySpawn = a : null;
             });
         });
 
@@ -75,23 +77,47 @@ public class Level : MonoBehaviour
                     break;
             }
         }
+
+        if (gameManager.gameTurn == "BATTLE")
+        {
+            if (fightRunningArenas.Count > 0)
+            {
+                foreach (Arena arena in fightRunningArenas)
+                {
+                    if (!arena.fightingRunning)
+                        fightRunningArenas.Remove(arena);
+                }
+            }
+            else
+            {
+                gameManager.NextTurn();
+            }
+        }
     }
 
-    void PlayerTurn() { 
-        if(CheckWinCondition() == 0)
+    void PlayerTurn()
+    {
+        if (CheckWinCondition() == 0)
             deckManager.CallFillHand();
-        else if(CheckWinCondition() == 1){
+        else if (CheckWinCondition() == 1)
+        {
             gameManager.Win();
-        }else if(CheckWinCondition() == 2){
+        }
+        else if (CheckWinCondition() == 2)
+        {
             gameManager.Defeat();
         }
     }
 
-    int CheckWinCondition(){
+    int CheckWinCondition()
+    {
         //se começar o turno do jogador com uma dessas condições, retorna um resultado equivalente (int)
-        if(PlayerSpawn.characterGroup.enemies.Count > 0 && PlayerSpawn.characterGroup.allies.Count > 0)
+        if (
+            PlayerSpawn.characterGroup.enemies.Count > 0
+            && PlayerSpawn.characterGroup.allies.Count > 0
+        )
             return 2;
-        else if(EnemySpawn.characterGroup.allies.Count > 0)
+        else if (EnemySpawn.characterGroup.allies.Count > 0)
             return 1;
 
         return 0;
@@ -110,7 +136,10 @@ public class Level : MonoBehaviour
             foreach (Arena arena in floor.arenas)
             {
                 if (arena.isFighting)
+                {
+                    fightRunningArenas.Add(arena);
                     arena.AttackRound();
+                }
             }
         }
         // Wait Battle Turn flag
@@ -163,7 +192,6 @@ public class Level : MonoBehaviour
 
     private void MoveEnemies()
     {
-        movingEnemies = true;
         List<Arena> arenas = new List<Arena>();
 
         foreach (Floor floor in floors)
@@ -187,11 +215,15 @@ public class Level : MonoBehaviour
             {
                 arena.MoveEnemies();
                 yield return new WaitForSeconds(
-                    Character.speed * 0.07f * arena.downWays.Count * arena.characterGroup.enemies.Count + 2f
+                    Character.speed
+                        * 0.07f
+                        * arena.downWays.Count
+                        * arena.characterGroup.enemies.Count
+                        + 2f
                 );
             }
         }
-        movingEnemies = false;
+        gameManager.NextTurn();
     }
 
     public void ClearSelectedArenas()
