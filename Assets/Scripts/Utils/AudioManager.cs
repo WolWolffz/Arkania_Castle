@@ -68,6 +68,6 @@ public class AudioManager : MonoBehaviour
     {
         if (slider == null)
             slider = GameObject.Find("/Canvas/Config/Slider").GetComponent<Slider>();
-        audioSource.volume = slider.value;
+        instance.audioSource.volume = slider.value;
     }
 }
