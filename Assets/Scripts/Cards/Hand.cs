@@ -67,6 +67,8 @@ public class Hand : MonoBehaviour
         {
             // Instancia a carta na posição do deck
             GameObject newCard = Instantiate(cardPrefab, deck.transform.position, Quaternion.identity, handTransform);
+            newCard.GetComponent<AudioSource>().mute = AudioManager.instance.GetComponent<AudioSource>().mute;
+            newCard.GetComponent<AudioSource>().volume = AudioManager.instance.GetComponent<AudioSource>().volume;
             cardsInHand.Add(newCard);
 
             // Inicia a movimentação da carta para a posição da mão

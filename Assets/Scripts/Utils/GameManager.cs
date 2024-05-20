@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,14 +19,15 @@ public class GameManager : MonoBehaviour
 
     public int playerMana = 4;
     public int playerMaxMana = 4;
-    public int enemyMana = 4;
-    public int enemyMaxMana = 4;
+    private int enemyMana = 3;
+    private int enemyMaxMana = 3;
     private TMP_Text turnText;
     private TMP_Text manaText;
     private Button turnButton;
 
     public int debugInt;
     private int lastDebugInt;
+    private Scene currentScene;
 
     void Awake()
     {
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
             turnText = GameObject.Find("/Canvas/Turn/Text").GetComponent<TMP_Text>();
             manaText = GameObject.Find("/Canvas/Mana/Text").GetComponent<TMP_Text>();
         }
-        catch { }
+        catch {}
     }
 
     // Update is called once per frame
@@ -60,6 +62,18 @@ public class GameManager : MonoBehaviour
                 case 2:
                     Defeat();
                     break;
+            }
+        }
+        //check para saber se mudou de scene
+        if(currentScene != SceneManager.GetActiveScene()){
+            currentScene = SceneManager.GetActiveScene();
+
+            //check para saber quais levels na tela de seleção de level estão liberados
+            if(currentScene.buildIndex == SceneManager.GetSceneByName("LevelSelection").buildIndex){
+                Button[] components = GameObject.Find("Levels").GetComponentsInChildren<Button>(true);
+                foreach(Button comp in components){
+                    GameObject.Find("LevelBeaten").GetComponent<LevelBeaten>().levelBeaten.ForEach(c => {if(comp.gameObject.name.ToCharArray().Last() == (c+1)) comp.interactable = true;});
+                }
             }
         }
     }
@@ -125,6 +139,9 @@ public class GameManager : MonoBehaviour
     public void Defeat()
     {
         GameObject.Find("/Canvas/Cards Set").SetActive(false);
+        GameObject.Find("/Canvas/Turn").SetActive(false);
+        GameObject.Find("/Canvas/Mana").SetActive(false);
+
         GameObject canvas = GameObject.Find("/Canvas");
         Instantiate(
             Resources.Load("DefeatScreen", typeof(GameObject)),
@@ -136,7 +153,12 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
+        GameObject.Find("LevelBeaten").GetComponent<LevelBeaten>().levelBeaten.Add(SceneManager.GetActiveScene().name.ToCharArray().Last());
+
         GameObject.Find("/Canvas/Cards Set").SetActive(false);
+        GameObject.Find("/Canvas/Turn").SetActive(false);
+        GameObject.Find("/Canvas/Mana").SetActive(false);
+
         GameObject canvas = GameObject.Find("/Canvas");
         Instantiate(
             Resources.Load("WinScreen", typeof(GameObject)),
@@ -175,6 +197,9 @@ public class GameManager : MonoBehaviour
     public void SetMute(bool mute)
     {
         AudioManager.instance.GetComponent<AudioSource>().mute = mute;
-        Camera.main.GetComponent<AudioListener>().enabled = mute;
+    }
+
+    public void ChangeVolume(){
+        AudioManager.instance.ChangeVolume();
     }
 }

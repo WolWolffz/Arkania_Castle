@@ -24,6 +24,7 @@ public class Arena : MonoBehaviour
         clickDest;
     public bool isPlayerSpawn;
     public bool isEnemySpawn;
+    public bool alreadyMoved;
 
     void Awake()
     {
@@ -138,7 +139,7 @@ public class Arena : MonoBehaviour
     {
         List<Way> orderedDownWays = downWays;
 
-        orderedDownWays = orderedDownWays.OrderByDescending(a => a.bottomArena.characterGroup.freeEnemiesSlots).ToList();
+        orderedDownWays = orderedDownWays.OrderByDescending(a => a.bottomArena.characterGroup.allies.Count).ThenByDescending(a => a.bottomArena.characterGroup.freeEnemiesSlots).ToList();
         
         StartCoroutine(MoveEnemiesDelayed(orderedDownWays));
     }
