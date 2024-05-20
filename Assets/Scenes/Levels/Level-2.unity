@@ -1890,7 +1890,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1603249475}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: EndGameOption
         m_Mode: 3
@@ -2840,7 +2840,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1603249475}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: EndGameOption
         m_Mode: 3
@@ -10494,7 +10494,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1603249475}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: EndGameOption
         m_Mode: 3
