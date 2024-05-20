@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
 
     public int playerMana = 4;
     public int playerMaxMana = 4;
-    public int enemyMana = 4;
-    public int enemyMaxMana = 4;
+    private int enemyMana = 3;
+    private int enemyMaxMana = 3;
     private TMP_Text turnText;
     private TMP_Text manaText;
     private Button turnButton;

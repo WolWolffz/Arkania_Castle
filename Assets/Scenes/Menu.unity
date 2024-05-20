@@ -1728,8 +1728,8 @@ MonoBehaviour:
   enemiesList: []
   playerMana: 4
   playerMaxMana: 4
-  enemyMana: 4
-  enemyMaxMana: 4
+  enemyMana: 3
+  enemyMaxMana: 3
   debugInt: 0
 --- !u!4 &1233547264
 Transform:
