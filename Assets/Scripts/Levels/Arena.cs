@@ -15,6 +15,7 @@ public class Arena : MonoBehaviour
 
     public bool isSelected = false;
     public bool isFighting = false;
+    public bool fightingRunning = false;
 
     private SpriteRenderer spriteRenderer;
     private Color unselectedColor,
@@ -85,6 +86,7 @@ public class Arena : MonoBehaviour
 
     public IEnumerator AttackRoundDelayed()
     {
+        fightingRunning = true;
         List<Character> allies = characterGroup.allies.Cast<Character>().ToList();
         List<Character> enemies = characterGroup.enemies.Cast<Character>().ToList();
 
@@ -106,6 +108,8 @@ public class Arena : MonoBehaviour
 
         characterGroup.OrderAllies();
         characterGroup.OrderEnemies();
+
+        fightingRunning = false;
     }
 
     public void MoveAllies(Arena toArena)
