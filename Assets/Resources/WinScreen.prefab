@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1380117238117306042}
   - component: {fileID: 7459691139687413239}
   - component: {fileID: 3023500197045890866}
-  - component: {fileID: 2432637494807704299}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -76,21 +75,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!111 &2432637494807704299
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2315746895679773850}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 316877d4a4824514fb77401a2341f45d, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &3742038463399582962
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,8 +708,6 @@ MonoBehaviour:
   enemiesList: []
   playerMana: 4
   playerMaxMana: 4
-  enemyMana: 4
-  enemyMaxMana: 4
   debugInt: 0
 --- !u!1 &6893857205008325381
 GameObject:
