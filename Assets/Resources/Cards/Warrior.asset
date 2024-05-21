@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardType: 0
   nameCard: Warrior
-  prefab: {fileID: 8091822665792603001, guid: efe704f3020338342a718627ebe1f6c9, type: 3}
+  prefab: {fileID: 3684106159918720021, guid: 1bfe0c1c660ae5e4fbf9adf8abc1eacb, type: 3}
   descriptionCard: Warrior of Arkania
   effect: 0
   spriteCard: {fileID: 21300000, guid: 73c3a8c8e2613684ba5089efe8bcc611, type: 3}

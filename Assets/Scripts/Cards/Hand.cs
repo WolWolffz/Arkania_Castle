@@ -6,7 +6,7 @@ public class Hand : MonoBehaviour
 {
     public Deck deckManager;
     public GameObject cardPrefab;
-    public Transform handTransform;
+    public RectTransform handTransform;
     public float fanSpread = 5f;
     public float cardSpacing = 1.5f;
     public float verticalSpacing = 0.2f;

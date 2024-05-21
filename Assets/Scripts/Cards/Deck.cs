@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CardScript;
-using System.ComponentModel;
 public class Deck : MonoBehaviour
 {
     public List<Card> allCards = new List<Card>();
@@ -15,13 +13,17 @@ public class Deck : MonoBehaviour
     GameObject hand;
     int cardsInHand;
 
-
-    void Start()
-    {
+    void Awake(){
         Card[] cards = Resources.LoadAll<Card>("Cards");
         allCards.AddRange(cards);
         hand = GameObject.FindGameObjectWithTag("HandPosition");
         cardsInHand = hand.transform.childCount;
+    }
+
+
+    void Start()
+    {
+        
     }
 
     public void CallFillHand()
