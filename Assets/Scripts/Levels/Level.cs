@@ -112,13 +112,13 @@ public class Level : MonoBehaviour
 
     int CheckWinCondition()
     {
-        //se começar o turno do jogador com uma dessas condições, retorna um resultado equivalente (int)
+        //se começar o turno do jogador com uma dessas condições, retorna um resultado equivalente: 1=winm 2=lose,0=neutro
         if (
             PlayerSpawn.characterGroup.enemies.Count > 0
-            && PlayerSpawn.characterGroup.allies.Count > 0
+            && PlayerSpawn.characterGroup.allies.Count < 1
         )
             return 2;
-        else if (EnemySpawn.characterGroup.allies.Count > 0)
+        else if (EnemySpawn.characterGroup.allies.Count > 0 && EnemySpawn.characterGroup.enemies.Count < 1)
             return 1;
 
         return 0;
@@ -180,7 +180,6 @@ public class Level : MonoBehaviour
             else
             {
                 toArena = arena;
-                toArena.alreadyMoved = true;
                 arena.Select(true);
                 Invoke("MoveAllies", 0.2f);
             }

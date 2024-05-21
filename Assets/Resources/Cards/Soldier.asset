@@ -17,4 +17,4 @@ MonoBehaviour:
   prefab: {fileID: 8091822665792603001, guid: efe704f3020338342a718627ebe1f6c9, type: 3}
   descriptionCard: Soldier of Arkania
   effect: 0
-  spriteCard: {fileID: 21300000, guid: cf6fb40fd2d3ac049bf4b4d5112eaca6, type: 3}
+  spriteCard: {fileID: 21300000, guid: 73c3a8c8e2613684ba5089efe8bcc611, type: 3}

@@ -125,6 +125,7 @@ public class Arena : MonoBehaviour
 
         if (way != null && toArena.characterGroup.freeAlliesSlots > 0)
         {
+            toArena.alreadyMoved = true;
             characterGroup.MoveAllies(toArena.characterGroup, way);
         }
         else

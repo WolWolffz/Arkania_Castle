@@ -138,17 +138,20 @@ public class CharacterGroup : MonoBehaviour
         int nMoves = Math.Min(nEnemies, nFreeEnemiesSlots);
 
         List<Enemy> toRemove = new List<Enemy>();
-
-        for (int i = 0; i < nMoves; i++)
-        {
-            var movePoints = new List<Vector3>
+        var movePoints = new List<Vector3>
             {
                 byWay.topPosition,
                 byWay.bottomPosition,
             };
-            enemies[i].Move(movePoints);
-            toRemove.Add(enemies[i]);
-            yield return new WaitForSeconds(Character.speed * 0.06f);
+            
+        for (int i = 0; i < nMoves; i++)
+        {
+            
+            if(enemies[i].name != "Evoker"){
+                enemies[i].Move(movePoints);
+                toRemove.Add(enemies[i]);
+                yield return new WaitForSeconds(Character.speed * 0.06f);
+            }
         }
         foreach(Enemy enemy in toRemove) enemies.Remove(enemy);
         

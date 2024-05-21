@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,6 +31,14 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
+        try
+        {
+            if(GameObject.Find("LevelBeaten").GetComponent<LevelBeaten>().alreadyPlayedVideo)
+                CloseVideo(GameObject.Find("VideoPlayer").GetComponent<VideoPlayer>());
+            else
+                GameObject.Find("VideoPlayer").GetComponent<VideoPlayer>().loopPointReached += CloseVideo;
+        }
+        catch {}
     }
 
     // Start is called before the first frame update
@@ -42,6 +51,17 @@ public class GameManager : MonoBehaviour
             manaText = GameObject.Find("/Canvas/HUD/Mana/Text").GetComponent<TMP_Text>();
         }
         catch {}
+    }
+
+    public void CloseVideo(VideoPlayer vp){
+        vp.GameObject().SetActive(false);
+        foreach(GameObject go in SceneManager.GetActiveScene().GetRootGameObjects()){
+            if(go.name == "Canvas"){
+                go.SetActive(true);
+                break;
+            }
+        } 
+        GameObject.Find("LevelBeaten").GetComponent<LevelBeaten>().alreadyPlayedVideo = true;
     }
 
     // Update is called once per frame
