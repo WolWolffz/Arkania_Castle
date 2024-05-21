@@ -7,6 +7,7 @@ using UnityEngine;
 class LevelBeaten : MonoBehaviour{
     public List<char> levelBeaten;
     public LevelBeaten instance;
+    public bool alreadyPlayedVideo;
     void Awake()
     {
         if (instance == null)
