@@ -1,9 +1,7 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using JetBrains.Annotations;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -39,9 +37,9 @@ public class GameManager : MonoBehaviour
     {
         try
         {
-            turnButton = GameObject.Find("/Canvas/Turn").GetComponent<Button>();
-            turnText = GameObject.Find("/Canvas/Turn/Text").GetComponent<TMP_Text>();
-            manaText = GameObject.Find("/Canvas/Mana/Text").GetComponent<TMP_Text>();
+            turnButton = GameObject.Find("/Canvas/HUD/Turn").GetComponent<Button>();
+            turnText = GameObject.Find("/Canvas/HUD/Turn/Text").GetComponent<TMP_Text>();
+            manaText = GameObject.Find("/Canvas/HUD/Mana/Text").GetComponent<TMP_Text>();
         }
         catch {}
     }
@@ -138,9 +136,9 @@ public class GameManager : MonoBehaviour
 
     public void Defeat()
     {
-        GameObject.Find("/Canvas/Cards Set").SetActive(false);
-        GameObject.Find("/Canvas/Turn").SetActive(false);
-        GameObject.Find("/Canvas/Mana").SetActive(false);
+        GameObject.Find("/Canvas/HUD/Cards Set").SetActive(false);
+        GameObject.Find("/Canvas/HUD/Turn").SetActive(false);
+        GameObject.Find("/Canvas/HUD/Mana").SetActive(false);
 
         GameObject canvas = GameObject.Find("/Canvas");
         Instantiate(
@@ -155,9 +153,9 @@ public class GameManager : MonoBehaviour
     {
         GameObject.Find("LevelBeaten").GetComponent<LevelBeaten>().levelBeaten.Add(SceneManager.GetActiveScene().name.ToCharArray().Last());
 
-        GameObject.Find("/Canvas/Cards Set").SetActive(false);
-        GameObject.Find("/Canvas/Turn").SetActive(false);
-        GameObject.Find("/Canvas/Mana").SetActive(false);
+        GameObject.Find("/Canvas/HUD/Cards Set").SetActive(false);
+        GameObject.Find("/Canvas/HUD/Turn").SetActive(false);
+        GameObject.Find("/Canvas/HUD/Mana").SetActive(false);
 
         GameObject canvas = GameObject.Find("/Canvas");
         Instantiate(
@@ -166,6 +164,10 @@ public class GameManager : MonoBehaviour
             canvas.GetComponent<Transform>().rotation,
             canvas.transform
         );
+
+        if(SceneManager.GetActiveScene().name == "Level-3")
+            GameObject.Find("/Canvas/WinScreen(Clone)/Next Button").SetActive(false);
+        
     }
 
     public void EndGameOption(int option)

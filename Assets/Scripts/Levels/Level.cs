@@ -41,18 +41,19 @@ public class Level : MonoBehaviour
                 floors.Add(component);
         }
 
-        deckManager = GameObject.Find("/Canvas/Cards Set/DeckManager").GetComponent<Deck>();
 
         floors.ForEach(f =>
         {
             f.arenas.ForEach(a =>
             {
-                a.isPlayerSpawn = true ? PlayerSpawn = a : null;
-                a.isEnemySpawn = true ? EnemySpawn = a : null;
+                a.isPlayerSpawn = PlayerSpawn == a ? true : false;
+                a.isEnemySpawn = EnemySpawn == a ? true : false;
             });
         });
 
-        PlayerTurn();
+        deckManager = GameObject.Find("/Canvas/HUD/Cards Set/DeckManager").GetComponent<Deck>();
+        
+        Invoke("PlayerTurn", 1);
     }
 
     // Update is called once per frame
