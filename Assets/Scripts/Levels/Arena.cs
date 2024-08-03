@@ -60,7 +60,7 @@ public class Arena : MonoBehaviour
         {
             clickDest = Input.mousePosition;
 
-            if (clickOrigin.y > clickDest.y - 2 && clickOrigin.y < clickDest.y + 2 && gameManager.canSpawnAndMove)
+            if (clickOrigin.y > clickDest.y - 2.5f && clickOrigin.y < clickDest.y + 2.5f && gameManager.canSpawnAndMove)
             {
                 clickDest = Vector3.up;
                 gameManager.level.ArenaClicked(this);

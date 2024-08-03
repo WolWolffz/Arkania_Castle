@@ -17,7 +17,7 @@ public class Allie : Character
         audioSource = GetComponent<AudioSource>();
         // print("audiosource id"+audioSource.GetInstanceID());
         audioSource.mute = audioManager.GetComponent<AudioSource>().mute;
-        audioSource.volume = audioManager.GetComponent<AudioSource>().volume;
+        audioSource.volume = audioManager.GetComponent<AudioSource>().volume * 0.35f;
     }
 
     // Update is called once per frame
