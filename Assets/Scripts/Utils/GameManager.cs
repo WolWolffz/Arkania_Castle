@@ -11,7 +11,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    // Auto instanciados
     public Level level;
+    public CameraController cameraController;
+    //----
+
     public string gameTurn = "PLAYER"; // PLAYER - ENEMY - BATTLE
     public bool canSpawnAndMove = true;
     public List<Enemy> enemiesList = new List<Enemy>();
@@ -120,6 +124,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         canSpawnAndMove = gameTurn == "PLAYER";
+        cameraController.SlideToGameTurnPos();
     }
 
     public void ShowTurn(string turno)

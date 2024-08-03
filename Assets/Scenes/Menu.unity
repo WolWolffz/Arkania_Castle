@@ -1882,7 +1882,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 64
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1987,8 +1987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94584596f7910334aa13887227291a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuMusic: {fileID: 8300000, guid: ffacc70ce94788441b6418614335f2b9, type: 3}
-  actionMusic: {fileID: 8300000, guid: 7c7070269f2ab25458772de403288f95, type: 3}
+  menuMusic: {fileID: 8300000, guid: 208f6ceeafb3ca14b9ba211a179d8db4, type: 3}
+  actionMusic: {fileID: 8300000, guid: 3df31b0c86acb4b49af8c47982982761, type: 3}
   slider: {fileID: 0}
 --- !u!1 &1350014604
 GameObject:
@@ -2384,7 +2384,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
